@@ -1,0 +1,6 @@
+{
+  "name": "XLOGIK",
+  "description": "XLOGIK builds web applications, mobile products, backend systems, cloud infrastructure and AI-powered software for businesses in Canada and beyond.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
