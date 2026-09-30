@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface NodePoint {
   id: string;
@@ -8,43 +8,33 @@ interface NodePoint {
   type: 'chartreuse' | 'coral' | 'graphite';
   subText: string;
   radius: number;
+  labelAlign: 'left' | 'right';
 }
 
 const NODES: NodePoint[] = [
-  { id: 'n1', label: 'EDGE.GATEWAY', x: 22, y: 25, type: 'chartreuse', subText: 'TLS 1.3 / INGRESS', radius: 4 },
-  { id: 'n2', label: 'SCHEMA.VAL', x: 48, y: 20, type: 'graphite', subText: 'STRICT_TS_CONTRACT', radius: 3 },
-  { id: 'n3', label: 'EVENT.BUS', x: 78, y: 32, type: 'chartreuse', subText: 'PUBSUB_PERSIST', radius: 4 },
-  { id: 'n4', label: 'STATE.LOCK', x: 35, y: 55, type: 'coral', subText: 'ACID_LEDGER_CHK', radius: 3.5 },
-  { id: 'n5', label: 'VECTOR.STORE', x: 65, y: 62, type: 'chartreuse', subText: 'HNSW_HYBRID_IDX', radius: 4.5 },
-  { id: 'n6', label: 'REPLICA.POW', x: 88, y: 75, type: 'graphite', subText: 'REGION_US_EAST', radius: 3 },
-  { id: 'n7', label: 'DISPATCH.SVC', x: 20, y: 80, type: 'chartreuse', subText: 'TELEMETRY_STREAM', radius: 4 },
-  { id: 'n8', label: 'AUDIT.LEDGER', x: 50, y: 88, type: 'coral', subText: 'IMMUTABLE_LOG', radius: 3.5 }
+  { id: 'n1', label: 'PRODUCT.EXPERIENCE', x: 18, y: 27, type: 'chartreuse', subText: 'WEB / MOBILE', radius: 4, labelAlign: 'right' },
+  { id: 'n2', label: 'APPLICATION.SYSTEMS', x: 74, y: 18, type: 'graphite', subText: 'FRONTEND / BACKEND', radius: 3, labelAlign: 'left' },
+  { id: 'n3', label: 'INTEGRATIONS', x: 77, y: 38, type: 'chartreuse', subText: 'APIs / SERVICES', radius: 4, labelAlign: 'left' },
+  { id: 'n4', label: 'DATA.SYSTEMS', x: 24, y: 48, type: 'coral', subText: 'SQL / NoSQL / SEARCH', radius: 3.5, labelAlign: 'right' },
+  { id: 'n5', label: 'AI & AUTOMATION', x: 70, y: 60, type: 'chartreuse', subText: 'LLM / RAG / AGENTS', radius: 4.5, labelAlign: 'right' },
+  { id: 'n6', label: 'CLOUD & DELIVERY', x: 76, y: 70, type: 'graphite', subText: 'CLOUD / CONTAINERS / CI-CD', radius: 3, labelAlign: 'left' },
+  { id: 'n7', label: 'SECURITY & ACCESS', x: 22, y: 82, type: 'chartreuse', subText: 'AUTH / RBAC / DATA', radius: 4, labelAlign: 'right' }
 ];
 
 const CONNECTIONS = [
-  { from: 0, to: 1, flow: true },
-  { from: 1, to: 2, flow: true },
-  { from: 1, to: 3, flow: false },
-  { from: 3, to: 4, flow: true },
-  { from: 2, to: 5, flow: true },
-  { from: 3, to: 6, flow: false },
-  { from: 4, to: 7, flow: true },
-  { from: 6, to: 7, flow: false },
+  { from: 0, to: 1, flow: true, route: 'M 18 27 L 18 12 L 74 12 L 74 18' },
+  { from: 1, to: 2, flow: true, route: 'M 74 18 L 86 18 L 86 38 L 77 38' },
+  { from: 1, to: 3, flow: false, route: 'M 74 18 L 60 18 L 60 48 L 24 48' },
+  { from: 3, to: 4, flow: true, route: 'M 24 48 L 24 60 L 70 60' },
+  { from: 4, to: 5, flow: true, route: 'M 70 60 L 60 60 L 60 70 L 76 70' },
+  { from: 3, to: 6, flow: false, route: 'M 24 48 L 12 48 L 12 82 L 22 82' },
+  { from: 5, to: 6, flow: false, route: 'M 76 70 L 90 70 L 90 92 L 22 92 L 22 82' },
 ];
 
 export const HeroVisual: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
   const [activeNode, setActiveNode] = useState<NodePoint | null>(null);
-  const [pulseTick, setPulseTick] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPulseTick((prev) => (prev + 1) % 1000);
-    }, 40);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -81,21 +71,20 @@ export const HeroVisual: React.FC = () => {
       {/* Structural Framing & Coordinate Calibrations */}
       <div className="absolute top-3 left-4 text-[10px] font-mono-code text-[#AEB7B2]/70 flex items-center gap-3">
         <span className="inline-block w-1.5 h-1.5 bg-[#C8FF3D] animate-pulse rounded-none" />
-        <span className="tracking-widest">SYS_ARCHITECTURE // CANADA_INFRA</span>
+        <span className="tracking-widest">XLOGIK // ENGINEERING_SYSTEM</span>
       </div>
 
       <div className="absolute top-3 right-4 text-[10px] font-mono-code text-[#AEB7B2]/60 hidden sm:block">
-        GRID [128.0.4] / LAT 43.6532°N
+        WEB / MOBILE / BACKEND / AI
       </div>
 
       <div className="absolute bottom-3 left-4 text-[10px] font-mono-code text-[#AEB7B2]/60 flex items-center gap-4">
-        <span>STATUS: <strong className="text-[#C8FF3D] font-normal">HEALTHY</strong></span>
-        <span className="hidden sm:inline">RTL: 14ms</span>
-        <span className="text-[#FF6B5C]/90">0 ERRORS</span>
+        <span>SYSTEM: <strong className="text-[#C8FF3D] font-normal">ACTIVE</strong></span>
+        <span className="hidden sm:inline">MODE: ENGINEERING</span>
       </div>
 
       <div className="absolute bottom-3 right-4 text-[10px] font-mono-code text-[#AEB7B2]/60 text-right">
-        XLOGIK_SPEC_V4.2
+        XLOGIK_SYSTEM_MAP
       </div>
 
       {/* Architectural Blueprint Layer (SVG) */}
@@ -132,15 +121,7 @@ export const HeroVisual: React.FC = () => {
         {CONNECTIONS.map((conn, idx) => {
           const fromNode = NODES[conn.from];
           const toNode = NODES[conn.to];
-          // Orthogonal routing path (Manhattan wiring style)
-          const midX = toNode.x;
-          const midY = fromNode.y;
-          const pathD = `M ${fromNode.x} ${fromNode.y} L ${midX} ${midY} L ${toNode.x} ${toNode.y}`;
-
-          // Active animated packet position along the line
-          const packetProgress = ((pulseTick * 1.5 + idx * 30) % 100) / 100;
-          const packetX = fromNode.x + (toNode.x - fromNode.x) * packetProgress;
-          const packetY = fromNode.y + (toNode.y - fromNode.y) * packetProgress;
+          const pathD = conn.route;
 
           const isCoralConnection = fromNode.type === 'coral' || toNode.type === 'coral';
 
@@ -148,75 +129,30 @@ export const HeroVisual: React.FC = () => {
             <g key={`conn-${idx}`}>
               {/* Static Background Path */}
               <path
+                id={`connection-path-${idx}`}
                 d={pathD}
                 fill="none"
                 stroke={isCoralConnection ? 'rgba(255, 107, 92, 0.2)' : 'rgba(200, 255, 61, 0.2)'}
                 strokeWidth="0.35"
               />
-              {/* Direct line */}
-              <line
-                x1={fromNode.x}
-                y1={fromNode.y}
-                x2={toNode.x}
-                y2={toNode.y}
-                stroke="rgba(255, 255, 255, 0.07)"
-                strokeWidth="0.25"
-                strokeDasharray="0.8, 1.2"
-              />
               {/* Moving data packet */}
               {conn.flow && (
                 <circle
-                  cx={packetX}
-                  cy={packetY}
+                  cx="0"
+                  cy="0"
                   r="0.75"
                   fill={isCoralConnection ? '#FF6B5C' : '#C8FF3D'}
                   opacity={0.85}
-                />
+                >
+                  <animateMotion dur="4s" repeatCount="indefinite" begin={`${idx * 0.6}s`}>
+                    <mpath href={`#connection-path-${idx}`} />
+                  </animateMotion>
+                </circle>
               )}
             </g>
           );
         })}
       </svg>
-
-      {/* Layered Architectural Graphite Surfaces */}
-      <div 
-        className="absolute top-1/4 left-1/3 w-64 h-48 border border-[#2E3634]/60 bg-[#181D1C]/50 backdrop-blur-xs p-3 pointer-events-none"
-        style={{
-          transform: `translate3d(${parallaxX * 0.7}px, ${parallaxY * 0.7}px, 0)`
-        }}
-      >
-        <div className="flex justify-between items-center text-[9px] font-mono-code text-[#AEB7B2]/80 border-b border-[#242C2A] pb-1 mb-2">
-          <span>PIPELINE_SCHEDULER</span>
-          <span className="text-[#C8FF3D]">ACTIVE</span>
-        </div>
-        <div className="space-y-1.5 text-[9px] font-mono-code text-[#AEB7B2]/70">
-          <div className="flex justify-between">
-            <span>&gt; Ingest Queue</span>
-            <span className="text-[#F5F7F2]">1,280 msg/s</span>
-          </div>
-          <div className="flex justify-between">
-            <span>&gt; Worker Pool</span>
-            <span className="text-[#F5F7F2]">16 cpus [Nominal]</span>
-          </div>
-          <div className="flex justify-between">
-            <span>&gt; DB Synchronization</span>
-            <span className="text-[#C8FF3D]">0.12ms sync</span>
-          </div>
-        </div>
-        {/* Progress gauge */}
-        <div className="mt-3 pt-2 border-t border-[#242C2A]">
-          <div className="h-1 bg-[#080A0A] w-full overflow-hidden">
-            <div 
-              className="h-full bg-[#C8FF3D] transition-all duration-300"
-              style={{ width: `${60 + (pulseTick % 30)}%` }}
-            />
-          </div>
-          <div className="flex justify-between text-[8px] font-mono-code text-[#AEB7B2]/50 mt-1">
-            <span>STREAM BUFFER</span>
-            <span>OK</span>
-          </div>
-        </div>
-      </div>
 
       {/* Interactive Node Anchors */}
       <div className="absolute inset-0">
@@ -225,7 +161,6 @@ export const HeroVisual: React.FC = () => {
           const mouseDist = Math.hypot((node.x / 100) - mousePos.x, (node.y / 100) - mousePos.y);
           const isProximity = mouseDist < 0.22;
           const isHovered = activeNode?.id === node.id;
-
           let colorClass = 'bg-[#C8FF3D] shadow-[0_0_12px_rgba(200,255,61,0.4)]';
           let textColor = 'text-[#C8FF3D]';
           let borderClass = 'border-[#C8FF3D]/40';
@@ -283,14 +218,14 @@ export const HeroVisual: React.FC = () => {
 
               {/* Minimal technical label tag */}
               <div 
-                className={`absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap px-2 py-0.5 bg-[#080A0A]/90 border border-[#242C2A] text-[9px] font-mono-code transition-all duration-200 ${
-                  isHovered || isProximity ? 'opacity-100 translate-x-1' : 'opacity-65'
+                className={`absolute ${node.labelAlign === 'left' ? 'right-4 text-right' : 'left-4'} top-1/2 -translate-y-1/2 whitespace-nowrap px-2.5 py-1.5 bg-[#080A0A]/90 border border-[#242C2A] text-[9px] font-mono-code transition-all duration-200 ${
+                  isHovered || isProximity ? `opacity-100 ${node.labelAlign === 'left' ? '-translate-x-1' : 'translate-x-1'}` : 'opacity-75'
                 }`}
               >
-                <div className="flex items-center gap-1.5">
-                  <span className={textColor}>{node.label}</span>
+                <div className={`leading-tight ${textColor}`}>
+                  {node.label}
                 </div>
-                <div className="text-[8px] text-[#AEB7B2]/70 font-sans tracking-wide">
+                <div className="mt-1 text-[8px] text-[#AEB7B2]/70 font-sans tracking-wide leading-tight">
                   {node.subText}
                 </div>
               </div>
@@ -299,26 +234,6 @@ export const HeroVisual: React.FC = () => {
         })}
       </div>
 
-      {/* Active Node Detail Hover Card */}
-      {activeNode && (
-        <div 
-          className="absolute bottom-12 right-6 max-w-xs bg-[#181D1C] border border-[#2E3634] p-3 text-left shadow-2xl z-20 pointer-events-none"
-          style={{ animation: 'fadeIn 0.2s ease-out' }}
-        >
-          <div className="flex items-center justify-between text-[10px] font-mono-code mb-1">
-            <span className="text-[#AEB7B2]">NODE_INSPECTION</span>
-            <span className={activeNode.type === 'coral' ? 'text-[#FF6B5C]' : 'text-[#C8FF3D]'}>
-              VERIFIED
-            </span>
-          </div>
-          <div className="text-sm font-semibold text-[#F5F7F2] mb-0.5">
-            {activeNode.label}
-          </div>
-          <div className="text-xs text-[#AEB7B2] leading-relaxed">
-            {activeNode.subText} — Architectural component running distributed fault-tolerant processing.
-          </div>
-        </div>
-      )}
     </div>
   );
 };
