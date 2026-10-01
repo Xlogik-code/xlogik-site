@@ -57,7 +57,7 @@ export const HeroVisual: React.FC = () => {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full h-[520px] sm:h-[580px] lg:h-[620px] bg-[#111515] border border-[#242C2A] rounded-sm overflow-hidden select-none transition-all duration-300"
+      className="relative w-full h-[clamp(440px,calc(100svh-300px),520px)] sm:h-[clamp(460px,calc(100svh-240px),580px)] lg:h-[clamp(480px,calc(100svh-250px),620px)] bg-[#111515] border border-[#242C2A] rounded-sm overflow-hidden select-none transition-all duration-300"
       id="hero-technical-canvas"
     >
       {/* Blueprint Grid Layer */}

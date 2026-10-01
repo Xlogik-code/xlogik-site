@@ -10,7 +10,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
   return (
     <section 
       id="hero" 
-      className="relative pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-28 lg:pb-32 bg-[#080A0A] overflow-hidden border-b border-[#181D1C]"
+      className="relative min-h-[100svh] pt-40 sm:pt-36 md:pt-32 lg:pt-[clamp(7.5rem,15vh,12rem)] pb-20 sm:pb-20 md:pb-16 lg:pb-[clamp(3rem,7vh,8rem)] bg-[#080A0A] overflow-hidden border-b border-[#181D1C]"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Asymmetric 12-Column Editorial Grid */}
@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
           <div className="lg:col-span-7 flex flex-col justify-center">
             
             {/* Small Technical Category Label */}
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-2 mb-6 lg:mb-4">
               <span className="w-2 h-2 bg-[#C8FF3D] rounded-none" />
               <span className="text-xs sm:text-sm font-mono-code font-semibold tracking-widest text-[#AEB7B2] uppercase">
                 XLOGIK / SOFTWARE ENGINEERING
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.03em] font-extrabold text-[#F5F7F2] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.03em] font-extrabold text-[#F5F7F2] mb-8 lg:mb-6">
               Software built around the{' '}
               <span className="font-serif-editorial italic font-normal text-[#C8FF3D] inline-block">
                 way you work.
@@ -36,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
             </h1>
 
             {/* Supporting Copy */}
-            <p className="text-base sm:text-lg lg:text-xl text-[#AEB7B2] font-normal leading-relaxed max-w-2xl mb-10">
+            <p className="text-base sm:text-lg lg:text-xl text-[#AEB7B2] font-normal leading-relaxed max-w-2xl mb-10 lg:mb-8">
               XLOGIK designs and builds web applications, mobile products, backend systems, cloud infrastructure, and AI-powered software for businesses that need technology they can depend on.
             </p>
 
@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
             </div>
 
             {/* Micro Technical Index Line */}
-            <div className="mt-14 pt-6 border-t border-[#181D1C] flex flex-wrap items-center gap-x-8 gap-y-3 text-xs font-mono-code text-[#AEB7B2]/70">
+            <div className="mt-14 pt-6 lg:mt-8 lg:pt-4 border-t border-[#181D1C] flex flex-wrap items-center gap-x-8 gap-y-3 text-xs font-mono-code text-[#AEB7B2]/70">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#C8FF3D] rounded-none" />
                 <span>CANADIAN ENGINEERING STUDIO</span>
