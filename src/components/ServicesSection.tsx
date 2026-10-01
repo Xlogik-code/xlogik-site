@@ -30,7 +30,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </h2>
           </div>
           <p className="text-sm text-[#AEB7B2] font-mono-code max-w-sm">
-            END-TO-END SOFTWARE ENGINEERING // MODERN TECHNICAL DISCIPLINES
+            WEB / MOBILE / BACKEND / AI
           </p>
         </div>
 
@@ -112,10 +112,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         </div>
 
         {/* Bottom micro-statement */}
-        <div className="mt-8 flex flex-wrap items-center justify-between text-xs font-mono-code text-[#AEB7B2]/60 pt-4">
+        {/* <div className="mt-8 flex flex-wrap items-center justify-between text-xs font-mono-code text-[#AEB7B2]/60 pt-4">
           <span>* ALL SERVICES DELIVERED WITH PRODUCTION MONITORING & RIGOROUS DOCUMENTATION</span>
           <span className="text-[#C8FF3D]">8 ACTIVE DISCIPLINES</span>
-        </div>
+        </div> */}
       </div>
     </section>
   );

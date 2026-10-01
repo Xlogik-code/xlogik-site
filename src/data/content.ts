@@ -5,57 +5,97 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'web-apps',
     number: '01',
     title: 'Web Applications',
-    shortDesc: 'SaaS platforms, customer portals, internal tools, business applications, dashboards, and digital products.',
-    deliverables: ['Custom SaaS platforms', 'High-throughput customer portals', 'Complex operational dashboards', 'Internal workflow tools']
+    shortDesc: 'Web products built around the way people actually use them - from customer-facing applications and SaaS products to internal tools and business dashboards.',
+    deliverables: [
+      'SaaS and web platforms',
+      'Customer portals',
+      'Business dashboards',
+      'Internal workflow tools'
+    ]
   },
   {
     id: 'mobile-apps',
     number: '02',
     title: 'Mobile Applications',
-    shortDesc: 'iOS and Android applications designed around real user workflows.',
-    deliverables: ['Native iOS & Android apps', 'Cross-platform React Native & Flutter', 'Offline-first sync architectures', 'Field workforce tools']
+    shortDesc: 'Mobile applications for teams and customers who need to get work done wherever they are, with experiences designed around the devices they use.',
+    deliverables: [
+      'iOS and Android applications',
+      'Cross-platform mobile apps',
+      'Offline and sync workflows',
+      'Field and workforce applications'
+    ]
   },
   {
     id: 'backend-apis',
     number: '03',
     title: 'Backend & APIs',
-    shortDesc: 'Reliable backend systems, APIs, authentication, integrations, data processing, and microservices.',
-    deliverables: ['RESTful & GraphQL services', 'Event-driven message queues', 'Zero-trust authentication & RBAC', 'Distributed background workers']
+    shortDesc: 'The systems behind the product - APIs, business logic, authentication, integrations, background processing, and the data that keeps everything connected.',
+    deliverables: [
+      'REST and GraphQL APIs',
+      'Authentication and access control',
+      'Background processing',
+      'Third-party integrations'
+    ]
   },
   {
     id: 'ai-genai',
     number: '04',
     title: 'AI & Generative AI',
-    shortDesc: 'AI assistants, RAG systems, AI agents, document intelligence, knowledge search, and workflow automation.',
-    deliverables: ['Retrieval-Augmented Generation (RAG)', 'Autonomous agent pipelines', 'Document OCR & semantic parsing', 'Deterministic validation guardrails']
+    shortDesc: 'AI features built into real products and workflows, from assistants and document processing to knowledge search and task automation.',
+    deliverables: [
+      'AI assistants',
+      'RAG and knowledge search',
+      'AI agents and workflow automation',
+      'Document and data extraction'
+    ]
   },
   {
     id: 'cloud-devops',
     number: '05',
     title: 'Cloud & DevOps',
-    shortDesc: 'AWS, Azure, GCP, infrastructure automation, CI/CD, containers, monitoring, and deployment.',
-    deliverables: ['Terraform Infrastructure as Code', 'Kubernetes & container orchestration', 'Automated staging & release pipelines', 'Disaster recovery architectures']
+    shortDesc: 'Cloud environments and deployment workflows that make software easier to release, operate, and maintain.',
+    deliverables: [
+      'Cloud infrastructure',
+      'Containers and deployment',
+      'CI/CD pipelines',
+      'Monitoring and operational setup'
+    ]
   },
   {
     id: 'data-integrations',
     number: '06',
     title: 'Data & Integrations',
-    shortDesc: 'Databases, data pipelines, third-party APIs, synchronization, and business integrations.',
-    deliverables: ['ETL & real-time streaming pipelines', 'PostgreSQL & transactional data modeling', 'ERP / CRM bi-directional sync', 'Resilient webhook ingest systems']
+    shortDesc: 'Connecting the systems your business already relies on, while keeping data consistent and useful across applications, services, and external platforms.',
+    deliverables: [
+      'Database design and integration',
+      'Data import and processing',
+      'Third-party API integrations',
+      'Synchronization and webhooks'
+    ]
   },
   {
     id: 'modernization',
     number: '07',
     title: 'Software Modernization',
-    shortDesc: 'Modernize existing applications, architecture, databases, and infrastructure without unnecessary rewrites.',
-    deliverables: ['Strangler fig migration paths', 'Database schema decoupling', 'Monolith to modular services', 'Legacy API modernization']
+    shortDesc: 'Improving existing software without replacing everything at once. We help untangle older systems, improve their structure, and move them forward in practical steps.',
+    deliverables: [
+      'Legacy application updates',
+      'Architecture improvements',
+      'Database modernization',
+      'API and service migration'
+    ]
   },
   {
     id: 'consulting',
     number: '08',
     title: 'Technology Consulting',
-    shortDesc: 'Architecture, technical discovery, technology strategy, system design, and engineering planning.',
-    deliverables: ['Architecture audits & risk reviews', 'Technology vendor evaluations', 'Technical due diligence', 'System design specifications']
+    shortDesc: 'Technical guidance for projects that need a clearer direction - from early discovery and architecture decisions to reviewing an existing system and planning what comes next.',
+    deliverables: [
+      'Technical discovery',
+      'Architecture reviews',
+      'Technology decisions',
+      'System design and planning'
+    ]
   }
 ];
 
