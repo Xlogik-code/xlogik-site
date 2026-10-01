@@ -30,7 +30,7 @@ export const ApproachSection: React.FC = () => {
           {/* Supporting Copy (Cols 9-12) */}
           <div className="lg:col-span-4 flex flex-col justify-end">
             <p className="text-base sm:text-lg text-[#AEB7B2] leading-relaxed">
-              We work with businesses that need to build something new, improve an existing product, or make complicated systems easier to operate. We bring product thinking and engineering together to turn those problems into software that can grow with the business.
+              We start by understanding the problem before deciding how to solve it. That means looking at the bigger picture, asking the right questions, and making sure we're solving the right problem—not just building what was originally requested.
             </p>
           </div>
         </div>
@@ -38,26 +38,26 @@ export const ApproachSection: React.FC = () => {
         {/* Editorial Footprint: 3 Core Pragmatic Tenets */}
         <div className="mt-20 sm:mt-24 pt-12 border-t border-[#181D1C] grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <div className="space-y-2">
-            <div className="text-xs font-mono-code text-[#C8FF3D]">PRAGMATIC SCOPING</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Direct domain discovery</h3>
+            <div className="text-xs font-mono-code text-[#C8FF3D]">UNDERSTAND THE WORK</div>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Start with how things actually work.</h3>
             <p className="text-sm text-[#AEB7B2] leading-relaxed">
-              We study the realities of your users' operational workflow before committing to architectural lines.
+              Before we talk about technology, we learn how the business works, who uses the product, and where the current process falls short. That gives us a clearer starting point for deciding what the software actually needs to do.
             </p>
           </div>
 
           <div className="space-y-2">
-            <div className="text-xs font-mono-code text-[#C8FF3D]">COHESIVE EXECUTION</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Design and engineering united</h3>
+            <div className="text-xs font-mono-code text-[#C8FF3D]">BUILD WHAT MATTERS</div>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Keep the product focused.</h3>
             <p className="text-sm text-[#AEB7B2] leading-relaxed">
-              Interfaces are crafted with deep knowledge of backend state machines, reducing friction between design and code.
+              We focus on the parts that solve the real problem first, then make practical decisions about the product, architecture, and technology. The goal is to build something useful without adding complexity that the business doesn't need.
             </p>
           </div>
 
           <div className="space-y-2">
-            <div className="text-xs font-mono-code text-[#FF6B5C]">LONG-TERM VIABILITY</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Architecture built to endure</h3>
+            <div className="text-xs font-mono-code text-[#FF6B5C]">MAKE IT YOURS</div>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Leave you with something you can own.</h3>
             <p className="text-sm text-[#AEB7B2] leading-relaxed">
-              Clear code boundaries, standard toolchains, and complete documentation so your team retains full ownership.
+              The code, documentation, and technical decisions should be clear enough for your team to understand and maintain. We build with long-term ownership in mind, whether your team continues the work with us or takes it forward on its own.
             </p>
           </div>
         </div>
