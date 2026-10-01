@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
             <div className="flex items-center gap-2 mb-6 lg:mb-4">
               <span className="w-2 h-2 bg-[#C8FF3D] rounded-none" />
               <span className="text-xs sm:text-sm font-mono-code font-semibold tracking-widest text-[#AEB7B2] uppercase">
-                XLOGIK / SOFTWARE ENGINEERING
+                XLOGIK / ENGINEERING STUDIO
               </span>
             </div>
 
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg lg:text-xl text-[#AEB7B2] font-normal leading-relaxed max-w-2xl mb-10 lg:mb-8">
-              XLOGIK designs and builds web applications, mobile products, backend systems, cloud infrastructure, and AI-powered software for businesses that need technology they can depend on.
+              We build the software behind real business workflows - from customer-facing products and internal tools to backend systems, integrations, cloud platforms, and AI applications.
             </p>
 
             {/* CTAs */}
@@ -71,9 +71,9 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
                 <span className="w-1.5 h-1.5 bg-[#FF6B5C] rounded-none" />
                 <span>PRODUCTION-READY SYSTEMS</span>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <span className="text-[#AEB7B2]/40">EST. TORONTO / CALGARY</span>
-              </div>
+              </div> */}
             </div>
 
           </div>
