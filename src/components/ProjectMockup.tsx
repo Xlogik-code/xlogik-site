@@ -25,7 +25,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'expenso') {
     return (
-      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 lg:p-7 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+      <div className="w-full bg-[#080A0A] p-3 sm:p-4 lg:p-5 flex flex-col select-none font-mono-code relative overflow-hidden">
         {/* Top Intelligence Bar */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
         </div>
 
         {/* Center: Intelligence Workspace */}
-        <div className="my-3 sm:my-4 space-y-3">
+        <div className="my-2 sm:my-3 space-y-2">
           {/* Top Cashflow Balance Grid */}
           <div className="grid grid-cols-3 gap-2 bg-[#111515] border border-[#181D1C] p-2.5 sm:p-3">
             <div>
@@ -122,7 +122,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
         </div>
 
         {/* Bottom Status Row */}
-        <div className="flex items-center justify-between text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
+        <div className="mt-2 flex items-center justify-between text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-3.5 h-3.5 text-[#C8FF3D]" />
             <span>ZERO-KNOWLEDGE STORAGE</span>

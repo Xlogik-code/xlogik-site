@@ -107,8 +107,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     clientSector: 'Personal Finance / AI / FinTech',
     aspectRatio: '16/10',
     imageAlt: 'Expenso Personal Finance & Conversational Intelligence Platform',
-    summary: 'A cross-platform personal finance platform combining expense tracking, bank statement imports, financial analytics, and conversational AI.',
-    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Capacitor', 'Gemini', 'Groq', 'TanStack Query', 'Zustand', 'IndexedDB'],
+    summary: 'A cross-platform personal finance platform that brings expense tracking, bank statement imports, financial analytics, and conversational AI into one place.',
+    technologies: ['Next.js', 'TypeScript', 'Firebase', 'Capacitor', 'Gemini', 'Groq', 'TanStack Query', 'Zustand', 'IndexedDB'],
     year: '2025',
     location: 'Web PWA + Android',
     overview: 'Expenso was built around a simple problem: managing money becomes complicated when expenses come from multiple accounts, currencies, statements, and payment sources. The application brings those workflows together in one place. Users can import bank statements and spreadsheets, organize transactions, review spending patterns, and ask questions about their finances using natural language.',
@@ -132,7 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Capacitor integration providing native Android biometric security'
     ],
     outcome: 'Unified multi-account expense tracking into a cohesive, private, and deterministic workflow. Users interact with their financial data through natural language while maintaining absolute certainty in arithmetic calculations.',
-    engineeringFocus: 'Keeping financial calculations deterministic while using AI for explanation, analysis, and natural-language interaction.'
+    engineeringFocus: 'Financial calculations stay deterministic, while AI is used for analysis, explanation, and natural-language interaction.'
   },
   {
     id: 'dronesurvey',

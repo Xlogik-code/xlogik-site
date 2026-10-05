@@ -29,7 +29,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
             </h2>
           </div>
           <p className="text-sm text-[#AEB7B2] font-mono-code max-w-sm">
-            ENGINEERED FOR STABILITY, SECURITY, AND MEASURABLE OPERATIONAL CLARITY
+            A SELECTION OF PRODUCTS AND SYSTEMS BUILT FOR DIFFERENT PROBLEMS, TEAMS, AND WORKFLOWS.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                 className="group relative bg-[#080A0A] border border-[#242C2A] p-6 sm:p-8 lg:p-10 hover:border-[#C8FF3D]/60 transition-all duration-300 shadow-2xl"
               >
                 {/* Featured Header Bar */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-[#181D1C] gap-4">
+                <div className="flex flex-col md:flex-row md:items-center justify-between pb-5 mb-6 border-b border-[#181D1C] gap-4">
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 bg-[#C8FF3D] rounded-none animate-pulse" />
                     <span className="text-xs font-mono-code font-bold tracking-wider text-[#C8FF3D] uppercase">
@@ -60,7 +60,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                 </div>
 
                 {/* Project Title & Subtitle Banner */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6 items-start">
                   <div className="lg:col-span-7">
                     <h3 
                       onClick={() => onOpenCaseStudy(study)}
@@ -92,13 +92,13 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                   onClick={() => onOpenCaseStudy(study)}
                   className="cursor-pointer relative bg-[#080A0A] border border-[#242C2A] p-2 hover:border-[#C8FF3D] transition-all duration-300 overflow-hidden mb-8"
                 >
-                  <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[16/9] bg-[#080A0A] transition-transform duration-500 group-hover:scale-[1.01]">
+                  <div className="relative overflow-hidden bg-[#080A0A] transition-transform duration-500 group-hover:scale-[1.01]">
                     <ProjectMockup id={study.id} />
                   </div>
                 </div>
 
                 {/* Bottom Technical & Action Bar */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-6 border-t border-[#181D1C] gap-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 border-t border-[#181D1C] gap-4 sm:gap-6">
                   {/* Technology line */}
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs font-mono-code text-[#AEB7B2]/60 mr-2">TECH:</span>
