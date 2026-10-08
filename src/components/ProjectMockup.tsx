@@ -1,15 +1,15 @@
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Terminal, 
-  Layers, 
-  Compass, 
-  FileSpreadsheet, 
-  Receipt, 
-  Building2, 
-  CheckCircle2, 
-  Shield, 
-  Globe, 
+import {
+  ShieldCheck,
+  Terminal,
+  Layers,
+  Compass,
+  FileSpreadsheet,
+  Receipt,
+  Building2,
+  CheckCircle2,
+  Shield,
+  Globe,
   FileCheck2,
   Calendar,
   Printer
@@ -25,7 +25,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'expenso') {
     return (
-      <div className="w-full bg-[#080A0A] p-3 sm:p-4 lg:p-5 flex flex-col select-none font-mono-code relative overflow-hidden">
+      <div className="w-full bg-[#080A0A] p-3 sm:p-4 lg:p-5 pt-10 sm:pt-10 lg:pt-10 flex flex-col select-none font-mono-code relative overflow-hidden">
         {/* Top Intelligence Bar */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
@@ -138,16 +138,16 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'dronesurvey') {
     return (
-      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+      <div className="w-full h-full bg-[#080A0A] px-4 pb-4 pt-10 sm:px-6 sm:pb-6 sm:pt-10 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
         {/* Top GIS Bar */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
             <Compass className="w-4 h-4 text-[#C8FF3D]" />
-            <span className="text-[#F5F7F2] font-bold">DRONESURVEY // BROWSER GIS ENGINE</span>
+            <span className="text-[#F5F7F2] font-bold">DRONESURVEY // BROWSER GIS VIEWER</span>
           </div>
           <div className="flex items-center gap-4 text-[10px]">
-            <span className="text-[#C8FF3D]">COG TILE STREAM: ACTIVE</span>
-            <span className="text-[#AEB7B2]/70 hidden sm:inline">2.4 GB ORTHOMOSAIC</span>
+            <span className="text-[#C8FF3D]">ON-DEMAND MAP TILES</span>
+            <span className="text-[#AEB7B2]/70 hidden sm:inline">LARGE RASTER DATASET</span>
           </div>
         </div>
 
@@ -155,7 +155,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
         <div className="my-3 sm:my-4 relative h-48 sm:h-64 bg-[#111515] border border-[#181D1C] p-4 overflow-hidden">
           {/* Spatial Grid Lines */}
           <div className="absolute inset-0 bg-tech-grid opacity-30" />
-          
+
           {/* Spatial Vector Lines & Polygons */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 500 240">
             {/* Elevation Contour Lines */}
@@ -172,7 +172,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
               strokeWidth="1.5"
               strokeDasharray="4 2"
             />
-            
+
             {/* Cadastral Polygon (Shapefile feature) */}
             <polygon
               points="140,40 280,30 360,110 320,190 180,180"
@@ -213,15 +213,15 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
               <Layers className="w-3 h-3" />
               <span>DYNAMIC TILING (GDAL/RASTERIO)</span>
             </span>
-            <span className="hidden sm:inline text-[#AEB7B2]/60">VIEWPORT STREAMING: 18ms</span>
+            <span className="hidden sm:inline text-[#AEB7B2]/60">VIEWPORT-BASED LOADING</span>
           </div>
         </div>
 
         {/* Footer Metrics Row */}
         <div className="grid grid-cols-3 gap-2 text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
           <div>FORMATS: <span className="text-[#F5F7F2]">COG / KML / SHP</span></div>
-          <div>CLIENT: <span className="text-[#C8FF3D]">LEAFLET CANVAS</span></div>
-          <div className="text-right">LOCAL DESKTOP: <span className="text-[#F5F7F2]">ZERO REQ.</span></div>
+          <div>MAP VIEW: <span className="text-[#C8FF3D]">LEAFLET</span></div>
+          <div className="text-right">NO DESKTOP GIS REQUIRED</div>
         </div>
       </div>
     );
@@ -232,7 +232,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'tour-diary') {
     return (
-      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 pt-10 sm:pt-10 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
         {/* Top Government Platform Banner */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
@@ -300,7 +300,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'smart-billing') {
     return (
-      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 pt-10 sm:pt-10 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
         {/* Top Smart Billing Header */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
@@ -373,7 +373,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // 05: SR SECURITY SERVICES (Corporate Website / Web Development)
   // =========================================================================
   return (
-    <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+    <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 pt-10 sm:pt-10 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
       {/* Top Corporate Web Header */}
       <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
         <div className="flex items-center gap-2">

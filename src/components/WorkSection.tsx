@@ -135,9 +135,9 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                 key={study.id} 
                 className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
               >
-                {/* Offset Image Container with Architectural Backing Plate (Cols 1-7) */}
+                {/* Image Container with Architectural Backing Plate (Cols 1-7) */}
                 <div className="lg:col-span-7 relative">
-                  <div className="hidden sm:block absolute -inset-2.5 bg-[#181D1C]/60 border border-[#242C2A] translate-x-2 translate-y-2 pointer-events-none" />
+                  <div className="hidden sm:block absolute -inset-2.5 bg-[#181D1C]/60 border border-[#242C2A] pointer-events-none" />
                   
                   <div 
                     onClick={() => onOpenCaseStudy(study)}

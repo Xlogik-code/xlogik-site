@@ -137,11 +137,11 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'dronesurvey',
     title: 'DroneSurvey',
-    subtitle: 'Browser-based GIS for massive photogrammetry and survey datasets.',
+    subtitle: 'Large-scale GIS, right in the browser.',
     clientSector: 'GIS / Geospatial / Photogrammetry',
     aspectRatio: '16/10',
     imageAlt: 'DroneSurvey Browser GIS & Large Raster Dataset Viewer',
-    summary: 'A browser-based GIS platform for viewing and working with large drone survey datasets without requiring traditional desktop GIS software.',
+    summary: 'A browser-based GIS application for exploring drone survey imagery and spatial data without relying on desktop GIS software.',
     technologies: ['React', 'TypeScript', 'Python', 'Flask', 'Rasterio', 'GDAL', 'Leaflet', 'Firebase'],
     year: '2025',
     location: 'Cloud Geospatial Pipeline',
@@ -164,7 +164,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Firebase cloud storage integration with secure tunnelling for private survey repos'
     ],
     outcome: 'Eliminated desktop GIS software barriers, allowing engineers and project managers to interactively inspect multi-gigabyte drone surveys and complex vector datasets smoothly in any modern web browser.',
-    engineeringFocus: 'Streaming and processing large geospatial datasets so the browser only receives the data required for the current map view.'
+    engineeringFocus: 'Processing large geospatial datasets on demand, so the browser loads only the map data needed for the current view.'
   },
   {
     id: 'tour-diary',
