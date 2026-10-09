@@ -233,7 +233,12 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                     >
                       {study.title}
                     </h3>
-                    <p className="mt-3 text-sm sm:text-base text-[#AEB7B2] leading-relaxed max-w-2xl">
+                    {study.subtitle && (
+                      <p className="mt-1 text-xs font-mono-code text-[#AEB7B2]/80">
+                        {study.subtitle}
+                      </p>
+                    )}
+                    <p className="mt-4 text-sm sm:text-base text-[#AEB7B2] leading-relaxed max-w-2xl">
                       {study.summary}
                     </p>
                   </div>
@@ -264,7 +269,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                   onClick={() => onOpenCaseStudy(study)}
                   className="cursor-pointer relative bg-[#080A0A] border border-[#242C2A] p-2 hover:border-[#C8FF3D]/70 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="relative overflow-hidden aspect-[16/10] sm:aspect-[21/9] min-h-[220px] bg-[#080A0A] transition-transform duration-500 group-hover:scale-[1.01]">
+                  <div className="relative overflow-hidden bg-[#080A0A] transition-transform duration-500 group-hover:scale-[1.01]">
                     <ProjectMockup id={study.id} />
                   </div>
                 </div>

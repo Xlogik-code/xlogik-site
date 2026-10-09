@@ -169,11 +169,11 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'tour-diary',
     title: 'Tour Diary',
-    subtitle: 'Bilingual travel records and automated government-format reporting.',
+    subtitle: 'Travel records and claims, made simpler.',
     clientSector: 'Government Workflow / Travel Claims / AI Automation',
     aspectRatio: '16/10',
     imageAlt: 'Tour Diary Bilingual Travel Claims & Excel Generation System',
-    summary: 'A bilingual travel diary and T.A./D.A. claim platform designed to simplify travel records, allowance calculations, and government-format reporting.',
+    summary: 'A bilingual travel diary application that helps government employees record journeys, calculate travel allowances, and prepare reports in the required government format.',
     technologies: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Gemini', 'Capacitor', 'ExcelJS'],
     year: '2025',
     location: 'Web + Android Application',
@@ -196,7 +196,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Capacitor integration enabling native Android deep-linking and offline leg logging'
     ],
     outcome: 'Replaced hours of tedious manual calculations and formatting with a dependable, structured application that generates official, audit-ready government claim spreadsheets in a single click.',
-    engineeringFocus: 'Turning a specific administrative workflow into a structured application while generating reports that follow the required government format.'
+    engineeringFocus: 'Turning travel entries into structured records, calculating allowances, and generating Excel reports in the required format.'
   },
   {
     id: 'smart-billing',

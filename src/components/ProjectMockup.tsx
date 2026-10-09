@@ -232,7 +232,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
   // =========================================================================
   if (id === 'tour-diary') {
     return (
-      <div className="w-full h-full bg-[#080A0A] p-4 sm:p-6 pt-10 sm:pt-10 flex flex-col justify-between select-none font-mono-code relative overflow-hidden">
+      <div className="w-full bg-[#080A0A] p-4 sm:p-6 flex flex-col select-none font-mono-code relative overflow-hidden">
         {/* Top Government Platform Banner */}
         <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
           <div className="flex items-center gap-2">
@@ -240,7 +240,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
             <span className="text-[#F5F7F2] font-bold">TOUR DIARY // પ્રવાસ ડાયરી અને ભથ્થું</span>
           </div>
           <div className="text-[10px] text-[#C8FF3D] border border-[#C8FF3D]/30 px-2 py-0.5">
-            GOVT FORMAT COMPLIANT
+            CLAIM REPORT PREVIEW
           </div>
         </div>
 
@@ -281,15 +281,15 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
 
           {/* AI Note Parse & Excel Generator badge */}
           <div className="bg-[#080A0A] p-2 border border-[#242C2A] flex items-center justify-between text-[9px] text-[#AEB7B2]">
-            <span className="text-[#AEB7B2]">AI LOG PARSER: <span className="text-[#F5F7F2]">"સુરત સાઇટ મુલાકાત" → EXTRACTED 2 LEGS</span></span>
-            <span className="text-[#C8FF3D] font-bold">EXCELJS FORM 14-A READY</span>
+            <span className="text-[#AEB7B2]">TRAVEL NOTE:{' '} <span className="text-[#F5F7F2]">"સુરત સાઇટ મુલાકાત" → EXTRACTED 2 LEGS</span></span>
+            <span className="text-[#C8FF3D] font-bold">EXCEL REPORT PREVIEW</span>
           </div>
         </div>
 
         {/* Footer info */}
         <div className="flex justify-between text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
-          <span>SUPABASE POSTGRESQL + RLS</span>
-          <span className="text-[#C8FF3D]">CLOUDFLARE TURNSTILE VERIFIED</span>
+          <span>DATA: SUPABASE / POSTGRESQL</span>
+          <span className="text-[#C8FF3D]">FORM VALIDATION ENABLED</span>
         </div>
       </div>
     );
