@@ -308,14 +308,14 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
             <span className="text-[#F5F7F2] font-bold">SMART BILLING // CLOUD INVOICE & GST</span>
           </div>
           <div className="text-[10px] text-[#C8FF3D]">
-            CGST + SGST DETERMINISTIC
+            GST CALCULATION PREVIEW
           </div>
         </div>
 
         {/* Center: Invoicing & Analytics Stream */}
         <div className="my-3 sm:my-4 bg-[#111515] border border-[#181D1C] p-3.5 space-y-2.5">
           <div className="grid grid-cols-4 text-[9px] text-[#AEB7B2]/60 uppercase tracking-wider pb-1 border-b border-[#181D1C]">
-            <span>INV_NO</span>
+            <span>INVOICE</span>
             <span>CUSTOMER</span>
             <span>TAX RATE</span>
             <span className="text-right">TOTAL (INR)</span>
@@ -347,7 +347,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
             <div className="flex items-center justify-between text-[#C8FF3D] text-[9px]">
               <span className="flex items-center gap-1">
                 <Terminal className="w-3 h-3" />
-                <span>AI RECOVERY ADVISOR (EN / GUJARATI)</span>
+                <span>BUSINESS INSIGHTS (EN / GUJARATI)</span>
               </span>
               <span>WHATSAPP REMINDERS: ACTIVE</span>
             </div>
@@ -361,9 +361,9 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
         <div className="flex justify-between text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
           <span className="flex items-center gap-1.5">
             <Printer className="w-3 h-3 text-[#C8FF3D]" />
-            <span>THERMAL PRINT READY (ESC/POS)</span>
+            <span>INVOICE PRINT PREVIEW</span>
           </span>
-          <span className="text-[#F5F7F2]">FIREBASE REALTIME DB: SYNCED</span>
+          <span className="text-[#F5F7F2]">DATA: FIREBASE</span>
         </div>
       </div>
     );

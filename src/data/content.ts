@@ -201,11 +201,11 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'smart-billing',
     title: 'Smart Billing',
-    subtitle: 'Cloud invoicing, multi-tier GST, and conversational AI business intelligence.',
+    subtitle: 'Billing and business insights in one place.',
     clientSector: 'Billing / Business Software / AI Analytics',
     aspectRatio: '16/9',
     imageAlt: 'Smart Billing Invoicing, Payment Tracking & AI Analytics Dashboard',
-    summary: 'A cloud billing platform combining invoicing, payment tracking, customer management, reporting, and AI-assisted business analysis.',
+    summary: 'A billing platform for managing invoices, tracking payments, organizing customer records, and reviewing sales through reports and AI-assisted insights.',
     technologies: ['React', 'TypeScript', 'Firebase', 'Gemini', 'Node.js'],
     year: '2024',
     location: 'Cloud Platform • Multi-Device',
@@ -229,7 +229,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Thermal printer hardware communication and high-resolution PDF rendering engines'
     ],
     outcome: 'Accelerated invoice turnaround, reduced receivables turnaround through automated reminders, and gave business owners instant conversational access to their operating trends in their preferred language.',
-    engineeringFocus: 'Preparing business metrics from application data first, then using AI to explain trends and generate insights rather than making the AI responsible for financial calculations.'
+    engineeringFocus: 'Keeping invoice and tax calculations consistent while using business data to help explain sales trends and outstanding payments.'
   },
   {
     id: 'sr-security-services',

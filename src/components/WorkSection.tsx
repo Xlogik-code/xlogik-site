@@ -306,9 +306,6 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
                       <span className="w-1.5 h-1.5 bg-[#C8FF3D] rounded-none" />
                       <span>04 // {study.clientSector}</span>
                     </div>
-                    <div className="text-xs font-mono-code text-[#AEB7B2]/70 mb-2">
-                      BUSINESS CLOUD PLATFORM • {study.year}
-                    </div>
                     <h3 
                       onClick={() => onOpenCaseStudy(study)}
                       className="text-2xl sm:text-3xl font-extrabold text-[#F5F7F2] tracking-tight group-hover:text-[#C8FF3D] transition-colors cursor-pointer"
