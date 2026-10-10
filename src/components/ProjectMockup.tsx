@@ -378,7 +378,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
       <div className="flex items-center justify-between border-b border-[#242C2A] pb-3 text-[11px] text-[#AEB7B2]">
         <div className="flex items-center gap-2">
           <Shield className="w-4 h-4 text-[#C8FF3D]" />
-          <span className="text-[#F5F7F2] font-bold">SR SECURITY SERVICES // CORPORATE PLATFORM</span>
+          <span className="text-[#F5F7F2] font-bold">SR SECURITY SERVICES // OFFICIAL WEBSITE</span>
         </div>
         <div className="text-[10px] text-[#C8FF3D] border border-[#C8FF3D]/30 px-2 py-0.5">
           PSARA / ISO CERTIFIED
@@ -394,7 +394,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
             <span className="text-[#AEB7B2]/70 text-[9px] block">Industrial plants & corporate parks</span>
           </div>
           <div className="bg-[#181D1C] p-2 border-l-2 border-[#C8FF3D] space-y-0.5">
-            <span className="text-[#F5F7F2] font-bold block">02. Executive Bouncers & VIP</span>
+            <span className="text-[#F5F7F2] font-bold block">02. Bouncer & Event Security</span>
             <span className="text-[#AEB7B2]/70 text-[9px] block">High-profile security & event management</span>
           </div>
           <div className="bg-[#181D1C] p-2 border-l-2 border-[#C8FF3D] space-y-0.5">
@@ -402,7 +402,7 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
             <span className="text-[#AEB7B2]/70 text-[9px] block">Commercial housekeeping & manpower</span>
           </div>
           <div className="bg-[#181D1C] p-2 border-l-2 border-[#C8FF3D] space-y-0.5">
-            <span className="text-[#F5F7F2] font-bold block">04. Corporate Detective</span>
+            <span className="text-[#F5F7F2] font-bold block">04. Detective Services</span>
             <span className="text-[#AEB7B2]/70 text-[9px] block">Internal audit & verification services</span>
           </div>
         </div>
@@ -410,14 +410,14 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ id }) => {
         {/* Deployment Process & Instant Enquiry callout */}
         <div className="bg-[#080A0A] p-2 border border-[#242C2A] flex items-center justify-between text-[9px]">
           <span className="text-[#AEB7B2]">6-STEP DEPLOYMENT: <span className="text-[#C8FF3D]">Audit → Roster → Deploy</span></span>
-          <span className="text-[#F5F7F2] font-bold">WHATSAPP DIRECT ENQUIRY READY</span>
+          <span className="text-[#F5F7F2] font-bold">DIRECT ENQUIRIES</span>
         </div>
       </div>
 
       {/* Footer stack and audit score */}
       <div className="flex justify-between text-[10px] text-[#AEB7B2] pt-2 border-t border-[#181D1C]">
         <span>REACT • TYPESCRIPT • TAILWIND CSS • VITE</span>
-        <span className="text-[#C8FF3D]">MOBILE-FIRST: 100/100</span>
+        <span className="text-[#C8FF3D]">RESPONSIVE WEBSITE</span>
       </div>
     </div>
   );

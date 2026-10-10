@@ -234,11 +234,11 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'sr-security-services',
     title: 'SR Security Services',
-    subtitle: 'High-trust corporate presence for security and facility management.',
+    subtitle: 'A clearer online presence for security and facility services.',
     clientSector: 'Corporate Website / Web Development',
     aspectRatio: '16/10',
     imageAlt: 'SR Security Services Corporate Website & Service Presentation',
-    summary: 'A corporate website for a Gujarat-based security and facility management company, designed to present its services, industries, credentials, and enquiry channels clearly.',
+    summary: 'A corporate website for a Gujarat-based security and facility management company, bringing its services, industry coverage, company credentials, and enquiry options together in one place.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     year: '2024',
     location: 'Gujarat, India',
@@ -262,7 +262,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Direct enquiry integration connecting potential corporate clients straight to operations'
     ],
     outcome: 'Created a modern, credible corporate identity that clearly showcases certifications and services, making it effortless for prospective clients to evaluate capabilities and submit direct commercial enquiries.',
-    engineeringFocus: 'Turning a broad range of security and facility-management services into a clear, professional website focused on trust, information hierarchy, and easy enquiry.'
+    engineeringFocus: 'Organizing a broad range of services into a clear, easy-to-navigate website that helps prospective clients understand the company and get in touch.'
   }
 ];
 
