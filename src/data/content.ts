@@ -269,39 +269,75 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const ENGINEERING_PILLARS: EngineeringPillar[] = [
   {
     title: 'Architecture',
-    summary: 'Systems designed to evolve.',
-    details: 'We design system boundaries around business domain capabilities, avoiding both fragile distributed microservice sprawl and tangled monolithic codebases.',
-    metricsOrPractices: ['Domain-Driven Design (DDD)', 'Explicit service contracts', 'Idempotent state machines', 'Decoupled data boundaries']
+    summary: 'A structure that can adapt.',
+    details:
+      'We organize code, data, and services around the needs of the product. Clear boundaries make the software easier to maintain and change as requirements evolve.',
+    metricsOrPractices: [
+      'Clear separation of responsibilities',
+      'Well-defined API contracts',
+      'Data models suited to the use case',
+      'Reusable, maintainable components'
+    ]
   },
   {
     title: 'Performance',
-    summary: 'Fast, responsive applications.',
-    details: 'Performance is engineered into data structures, indexing, and network transfer sizes from day one, not patched on after users complain.',
-    metricsOrPractices: ['Zero unnecessary bundle weight', 'Sub-millisecond query indexing', 'Optimistic UI state updates', 'Edge caching & CDN offload']
+    summary: 'Keep everyday tasks responsive.',
+    details:
+      'We pay attention to page load times, database queries, and how data moves through an application. Finding bottlenecks early helps keep common tasks fast as usage grows.',
+    metricsOrPractices: [
+      'Efficient database queries',
+      'Optimized network requests',
+      'Responsive interface updates',
+      'Caching where it makes sense'
+    ]
   },
   {
     title: 'Security',
-    summary: 'Authentication, authorization, and secure system design.',
-    details: 'Security is treated as an architectural foundation. We enforce least-privilege access, encrypted data states, and automated dependency inspection.',
-    metricsOrPractices: ['OAuth2 / OIDC & RBAC enforcement', 'AES-256 encryption at rest and in transit', 'Strict content security policies (CSP)', 'OWASP Top 10 continuous mitigation']
+    summary: 'Keep access and data protected.',
+    details:
+      'We build around who needs access to what, how users are authenticated, and how sensitive data is handled. The safeguards depend on the application and the risks involved.',
+    metricsOrPractices: [
+      'Secure authentication',
+      'Role-based access controls',
+      'Careful handling of sensitive data',
+      'Input validation and safe error handling'
+    ]
   },
   {
     title: 'Testing',
-    summary: 'Automated testing where it provides meaningful value.',
-    details: 'We write thorough integration tests and end-to-end user journeys that protect critical business logic, rather than chasing hollow 100% test coverage metrics.',
-    metricsOrPractices: ['Automated CI regression suites', 'Realistic mock API sandboxes', 'Property-based business logic tests', 'Deterministic database seed harnesses']
+    summary: 'Check the workflows that matter.',
+    details:
+      'We test important business rules, API behavior, and user journeys to catch problems before they affect users. The focus is on meaningful coverage, not numbers for their own sake.',
+    metricsOrPractices: [
+      'Tests for critical business logic',
+      'API and integration testing',
+      'Validation of key user journeys',
+      'Regression checks for changes'
+    ]
   },
   {
     title: 'Infrastructure',
-    summary: 'Reliable cloud and deployment environments.',
-    details: 'Every environment is defined in versioned code. Staging mirrors production so there are no surprises on release day.',
-    metricsOrPractices: ['Declarative Terraform IaC', 'Immutable container images', 'Blue-green & canary rollouts', 'Automated zero-downtime migrations']
+    summary: 'Make deployment more predictable.',
+    details:
+      'We plan how an application is configured, deployed, and maintained after launch. Where appropriate, repeatable releases, backups, and recovery plans help reduce operational risk.',
+    metricsOrPractices: [
+      'Environment-based configuration',
+      'Repeatable deployment processes',
+      'Backup and recovery planning',
+      'Deployment checks and rollback plans'
+    ]
   },
   {
     title: 'Observability',
-    summary: 'Systems that are easier to monitor and operate.',
-    details: 'Clear structured logging, distributed tracing, and actionable alerting ensure your team understands exactly what the software is doing in production.',
-    metricsOrPractices: ['OpenTelemetry structured traces', 'Actionable alert thresholds', 'Real-time error triage pipelines', 'Transparent service health checks']
+    summary: 'Know when something needs attention.',
+    details:
+      'Logs, error tracking, and monitoring help teams see how an application behaves after launch, investigate issues, and identify problems before they grow.',
+    metricsOrPractices: [
+      'Structured application logs',
+      'Error tracking and diagnostics',
+      'Application and service monitoring',
+      'Alerts for critical failures'
+    ]
   }
 ];
 

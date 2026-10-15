@@ -8,8 +8,8 @@ export const EngineeringSection: React.FC = () => {
   const icons = [Layers, Zap, Shield, FileCheck2, Server, Activity];
 
   return (
-    <section 
-      id="capabilities" 
+    <section
+      id="capabilities"
       className="py-14 sm:py-16 lg:py-20 bg-[#080A0A] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -27,13 +27,13 @@ export const EngineeringSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm text-[#AEB7B2] font-mono-code max-w-sm">
-            NO SUPERFLUOUS ABSTRACTIONS // DETERMINISTIC CODE AND VERIFIED ARCHITECTURES
+            THOUGHTFUL DECISIONS. CLEAR CODE. SOFTWARE BUILT TO LAST.
           </p>
         </div>
 
         {/* Typography & Thin Lines Technical Layout (NO standard 6-card grid) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left: Engineering Disciplines List with Thin Divider Lines (Cols 1-7) */}
           <div className="lg:col-span-7 divide-y divide-[#181D1C] border-y border-[#181D1C]">
             {ENGINEERING_PILLARS.map((pillar, idx) => {
@@ -44,9 +44,8 @@ export const EngineeringSection: React.FC = () => {
                 <div
                   key={pillar.title}
                   onClick={() => setActivePillarIndex(idx)}
-                  className={`group py-6 sm:py-7 cursor-pointer transition-all duration-200 relative ${
-                    isActive ? 'pl-4 sm:pl-6 bg-[#111515]' : 'hover:pl-2'
-                  }`}
+                  className={`group py-6 sm:py-7 cursor-pointer transition-all duration-200 relative ${isActive ? 'pl-4 sm:pl-6 bg-[#111515]' : 'hover:pl-2'
+                    }`}
                 >
                   {/* Chartreuse active side indicator line */}
                   {isActive && (
@@ -58,9 +57,8 @@ export const EngineeringSection: React.FC = () => {
                       <span className="font-mono-code text-xs sm:text-sm text-[#AEB7B2]/50 group-hover:text-[#C8FF3D] transition-colors">
                         /0{idx + 1}
                       </span>
-                      <h3 className={`text-xl sm:text-2xl font-bold transition-colors ${
-                        isActive ? 'text-[#C8FF3D]' : 'text-[#F5F7F2] group-hover:text-[#F5F7F2]'
-                      }`}>
+                      <h3 className={`text-xl sm:text-2xl font-bold transition-colors ${isActive ? 'text-[#C8FF3D]' : 'text-[#F5F7F2] group-hover:text-[#F5F7F2]'
+                        }`}>
                         {pillar.title}
                       </h3>
                     </div>
@@ -91,16 +89,16 @@ export const EngineeringSection: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <CurrentIcon className="w-4 h-4 text-[#C8FF3D]" />
                       <span className="text-[#F5F7F2] uppercase font-bold">
-                        SPEC: {current.title}
+                        ENGINEERING: {current.title}
                       </span>
                     </div>
-                    <span className="text-[#C8FF3D]">STANDARDS // V4</span>
+                    <span className="text-[#C8FF3D]">DESIGN PRINCIPLE</span>
                   </div>
 
                   {/* Summary & Core Objective */}
                   <div className="mb-6">
                     <div className="text-xs font-mono-code text-[#AEB7B2]/70 mb-1">
-                      CORE OBJECTIVE
+                      THE APPROACH
                     </div>
                     <div className="text-xl font-bold text-[#F5F7F2] mb-3">
                       {current.summary}
@@ -113,11 +111,11 @@ export const EngineeringSection: React.FC = () => {
                   {/* Concrete Engineering Protocols */}
                   <div className="pt-6 border-t border-[#181D1C]">
                     <div className="text-xs font-mono-code text-[#C8FF3D] mb-4">
-                      VERIFIED PRACTICES & PROTOCOLS
+                      ENGINEERING PRACTICES
                     </div>
                     <div className="space-y-3">
                       {current.metricsOrPractices.map((practice, pIdx) => (
-                        <div 
+                        <div
                           key={pIdx}
                           className="flex items-center gap-3 p-2.5 bg-[#080A0A] border border-[#181D1C] text-xs font-mono-code text-[#F5F7F2]"
                         >
@@ -130,8 +128,8 @@ export const EngineeringSection: React.FC = () => {
 
                   {/* Micro telemetry indicator */}
                   <div className="mt-8 pt-4 border-t border-[#181D1C] flex justify-between items-center text-[10px] font-mono-code text-[#AEB7B2]/60">
-                    <span>STATUS: ENFORCED IN CI/CD</span>
-                    <span className="text-[#FF6B5C]">STRICT COMPLIANCE</span>
+                    <span>FOCUS: MAINTAINABILITY</span>
+                    <span className="text-[#FF6B5C]">BUILT AROUND THE NEED</span>
                   </div>
                 </div>
               );
