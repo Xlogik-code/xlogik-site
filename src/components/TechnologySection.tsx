@@ -12,7 +12,7 @@ export const TechnologySection: React.FC = () => {
   return (
     <section 
       id="technology" 
-      className="py-24 sm:py-32 lg:py-36 bg-[#111515] border-b border-[#181D1C] relative"
+      className="py-14 sm:py-16 lg:py-20 bg-[#111515] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section Header */}

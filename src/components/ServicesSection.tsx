@@ -13,7 +13,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   return (
     <section 
       id="services" 
-      className="py-24 sm:py-32 lg:py-36 bg-[#080A0A] border-b border-[#181D1C] relative"
+      className="py-14 sm:py-16 lg:py-20 bg-[#080A0A] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section Header */}

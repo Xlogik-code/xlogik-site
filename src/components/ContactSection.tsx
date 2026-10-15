@@ -46,7 +46,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
   return (
     <section 
       id="contact" 
-      className="py-24 sm:py-32 lg:py-40 bg-[#080A0A] relative"
+      className="py-14 sm:py-16 lg:py-20 bg-[#080A0A] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         

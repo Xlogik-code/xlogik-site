@@ -12,11 +12,11 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
   return (
     <section 
       id="work" 
-      className="py-24 sm:py-32 lg:py-40 bg-[#111515] border-b border-[#181D1C] relative"
+      className="py-14 sm:py-16 lg:py-20 bg-[#111515] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 sm:mb-24 pb-8 border-b border-[#181D1C] gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-[#181D1C] gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-[3px] h-4 bg-[#C8FF3D]" />
@@ -34,7 +34,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenCaseStudy }) => 
         </div>
 
         {/* Asymmetric Curated Portfolio Items - 5 Real Projects */}
-        <div className="space-y-24 sm:space-y-36">
+        <div className="space-y-12 sm:space-y-16">
           
           {/* ========================================================================= */}
           {/* PROJECT 01: FEATURED — EXPENSO                                            */}
