@@ -10,8 +10,8 @@ export const TechnologySection: React.FC = () => {
     : TECH_CATEGORIES;
 
   return (
-    <section 
-      id="technology" 
+    <section
+      id="technology"
       className="py-14 sm:py-16 lg:py-20 bg-[#111515] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -27,7 +27,7 @@ export const TechnologySection: React.FC = () => {
             The right tools for the problem.
           </h2>
           <p className="text-base sm:text-lg text-[#AEB7B2] leading-relaxed">
-            We choose technology based on the product, the team, and the problem — not because something happens to be popular.
+            We choose technologies based on what a project needs — its requirements, existing systems, and plans for the future. The aim is to use tools that fit the job and are practical to maintain.
           </p>
         </div>
 
@@ -35,11 +35,10 @@ export const TechnologySection: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-12 pb-6 border-b border-[#181D1C]">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-3.5 py-1.5 text-xs font-mono-code transition-all cursor-pointer ${
-              selectedCategory === null
-                ? 'bg-[#C8FF3D] text-[#080A0A] font-bold'
-                : 'bg-[#181D1C] text-[#AEB7B2] hover:text-[#F5F7F2] border border-[#242C2A]'
-            }`}
+            className={`px-3.5 py-1.5 text-xs font-mono-code transition-all cursor-pointer ${selectedCategory === null
+              ? 'bg-[#C8FF3D] text-[#080A0A] font-bold'
+              : 'bg-[#181D1C] text-[#AEB7B2] hover:text-[#F5F7F2] border border-[#242C2A]'
+              }`}
           >
             ALL CATEGORIES ({TECH_CATEGORIES.reduce((acc, c) => acc + c.items.length, 0)})
           </button>
@@ -47,11 +46,10 @@ export const TechnologySection: React.FC = () => {
             <button
               key={cat.category}
               onClick={() => setSelectedCategory(selectedCategory === cat.category ? null : cat.category)}
-              className={`px-3.5 py-1.5 text-xs font-mono-code transition-all cursor-pointer ${
-                selectedCategory === cat.category
-                  ? 'bg-[#C8FF3D] text-[#080A0A] font-bold'
-                  : 'bg-[#181D1C] text-[#AEB7B2] hover:text-[#F5F7F2] border border-[#242C2A]'
-              }`}
+              className={`px-3.5 py-1.5 text-xs font-mono-code transition-all cursor-pointer ${selectedCategory === cat.category
+                ? 'bg-[#C8FF3D] text-[#080A0A] font-bold'
+                : 'bg-[#181D1C] text-[#AEB7B2] hover:text-[#F5F7F2] border border-[#242C2A]'
+                }`}
             >
               {cat.category.toUpperCase()}
             </button>
@@ -61,7 +59,7 @@ export const TechnologySection: React.FC = () => {
         {/* Technical Index Layout (Monochrome typography with hover chartreuse & connecting lines) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {displayedCategories.map((cat) => (
-            <div 
+            <div
               key={cat.category}
               className="bg-[#080A0A] border border-[#181D1C] p-6 relative group transition-all duration-300 hover:border-[#2E3634]"
             >
@@ -88,23 +86,21 @@ export const TechnologySection: React.FC = () => {
                     >
                       <div className="flex items-center gap-2">
                         {/* Connecting line indicator when hovered */}
-                        <span 
-                          className={`h-[1px] bg-[#C8FF3D] transition-all duration-200 ${
-                            isHovered ? 'w-4' : 'w-0'
-                          }`} 
+                        <span
+                          className={`h-[1px] bg-[#C8FF3D] transition-all duration-200 ${isHovered ? 'w-4' : 'w-0'
+                            }`}
                         />
-                        <span className={`transition-all duration-200 ${
-                          isHovered ? 'text-[#C8FF3D] font-bold translate-x-0.5' : 'text-[#AEB7B2]'
-                        }`}>
+                        <span className={`transition-all duration-200 ${isHovered ? 'text-[#C8FF3D] font-bold translate-x-0.5' : 'text-[#AEB7B2]'
+                          }`}>
                           {tech}
                         </span>
                       </div>
 
-                      {isHovered && (
+                      {/* {isHovered && (
                         <span className="text-[9px] text-[#AEB7B2]/50 uppercase tracking-widest animate-pulse">
                           VERIFIED
                         </span>
-                      )}
+                      )} */}
                     </li>
                   );
                 })}
@@ -117,7 +113,7 @@ export const TechnologySection: React.FC = () => {
         </div>
 
         {/* Live Inspector Note */}
-        <div className="mt-12 p-4 bg-[#181D1C]/60 border border-[#242C2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono-code text-[#AEB7B2]">
+        {/* <div className="mt-12 p-4 bg-[#181D1C]/60 border border-[#242C2A] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono-code text-[#AEB7B2]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-[#C8FF3D] rounded-none" />
             <span>
@@ -130,7 +126,7 @@ export const TechnologySection: React.FC = () => {
           <span className="text-[10px] text-[#AEB7B2]/60">
             INDEXED & AUDITED IN PRODUCTION PROJECTS
           </span>
-        </div>
+        </div> */}
 
       </div>
     </section>

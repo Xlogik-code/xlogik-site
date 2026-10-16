@@ -344,66 +344,73 @@ export const ENGINEERING_PILLARS: EngineeringPillar[] = [
 export const TECH_CATEGORIES: TechCategory[] = [
   {
     category: 'Languages',
-    items: ['TypeScript', 'JavaScript', 'Python', 'Java', 'C#', 'SQL', 'Solidity']
+    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C#', 'SQL']
   },
   {
     category: 'Frontend',
-    items: ['React', 'Next.js', 'Vue', 'Angular', 'Tailwind CSS']
+    items: ['React', 'Next.js', 'Vue', 'Angular']
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'FastAPI', 'Django', 'Flask', 'Spring Boot', '.NET']
+    items: ['FastAPI', 'Flask', 'Django', 'Node.js', 'Express', 'NestJS', 'Spring Boot', '.NET']
   },
   {
     category: 'Mobile',
-    items: ['React Native', 'Flutter', 'Swift', 'Kotlin']
+    items: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Capacitor']
   },
   {
-    category: 'Cloud',
-    items: ['AWS', 'Azure', 'Google Cloud']
+    category: 'Cloud & DevOps',
+    items: ['AWS', 'Microsoft Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD']
   },
   {
-    category: 'Infrastructure',
-    items: ['Docker', 'Kubernetes', 'Terraform', 'GitHub Actions']
-  },
-  {
-    category: 'Data',
+    category: 'Databases',
     items: ['PostgreSQL', 'MySQL', 'SQL Server', 'MongoDB', 'Redis', 'Firebase', 'Supabase']
   },
   {
-    category: 'AI',
-    items: ['OpenAI', 'Anthropic', 'AWS Bedrock', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG', 'Vector Databases', 'AI Agents']
+    category: 'AI & Automation',
+    items: ['OpenAI', 'Anthropic', 'Google Gemini', 'AWS Bedrock', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG', 'Vector Databases', 'AI Agents', 'Workflow Automation']
+  },
+  {
+    category: 'Integrations & APIs',
+    items: ['REST APIs', 'GraphQL', 'Webhooks', 'Third-Party Integrations', 'Authentication', 'Payment Integrations']
   }
 ];
 
 export const AI_CAPABILITIES = [
   {
     title: 'AI Assistants',
-    description: 'Context-aware conversational tools trained on specific organizational documentation and operational workflows.'
+    description:
+      'Assistants that answer questions, work with company information, and help people complete everyday tasks. They can be connected to internal documents, business tools, and existing workflows.'
   },
   {
-    title: 'RAG Systems',
-    description: 'Retrieval-Augmented Generation that grounds answers strictly in your verified private data stores with exact citations.'
+    title: 'Retrieval-Augmented Generation (RAG)',
+    description:
+      'AI that searches relevant documents and internal data before answering. Source references can help users check where an answer came from, making it easier to review and verify important information.'
   },
   {
     title: 'AI Agents',
-    description: 'Multi-step autonomous execution systems that parse instructions, query internal APIs, and complete operational tasks.'
+    description:
+      'AI systems that can work through multi-step tasks, use approved tools, and interact with APIs. Their actions and permissions are designed around the needs and risks of the workflow.'
   },
   {
     title: 'Document Intelligence',
-    description: 'Automated extraction of structured tables, entities, and compliance clauses from unstructured PDFs and images.'
+    description:
+      'Extract useful information from PDFs, forms, spreadsheets, and scanned documents. Structured output can then feed into existing applications, reporting tools, and business processes.'
   },
   {
     title: 'Knowledge Search',
-    description: 'Hybrid semantic and lexical search engines that locate relevant organizational information across disconnected silos.'
+    description:
+      'Search across documents and information stored in different systems. Combining keyword and meaning-based search can help people find relevant information without knowing exactly where it lives.'
   },
   {
     title: 'Workflow Automation',
-    description: 'Classification, triage, and programmatic routing of high-volume incoming communications and operational tickets.'
+    description:
+      'Reduce repetitive work by using AI to classify requests, extract details, route tasks, and prepare information for review. Rules and human approval can be included wherever the process requires them.'
   },
   {
     title: 'Natural Language Interfaces',
-    description: 'Human-friendly text interfaces that translate natural inquiries directly into database queries and operational commands.'
+    description:
+      'Let people interact with business data and software using everyday language. Depending on the application, this can include asking questions, retrieving information, or initiating approved actions.'
   }
 ];
 

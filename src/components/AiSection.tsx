@@ -6,8 +6,8 @@ export const AiSection: React.FC = () => {
   const [activeCapIndex, setActiveCapIndex] = useState(1); // Default to RAG
 
   return (
-    <section 
-      id="ai" 
+    <section
+      id="ai"
       className="py-14 sm:py-16 lg:py-20 bg-[#080A0A] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -23,7 +23,7 @@ export const AiSection: React.FC = () => {
             AI where it actually helps.
           </h2>
           <p className="text-base sm:text-lg text-[#AEB7B2] leading-relaxed">
-            AI is useful when it removes friction, improves a workflow, or gives people a better way to work with information. We integrate AI into products where it solves a real problem — rather than adding AI simply because it is fashionable.
+            We build AI features around real tasks - helping people find information, work with documents, automate repetitive steps, and get more from their existing systems. The approach depends on the problem, the data, and how much control the workflow needs.
           </p>
         </div>
 
@@ -32,42 +32,42 @@ export const AiSection: React.FC = () => {
           <div className="flex items-center justify-between border-b border-[#181D1C] pb-3 mb-6 text-xs font-mono-code text-[#AEB7B2]">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#C8FF3D] rounded-none" />
-              <span className="text-[#F5F7F2] font-bold">SYSTEM_SCHEMATIC: DETERMINISTIC AI INGESTION PIPELINE</span>
+              <span className="text-[#F5F7F2] font-bold">AI_WORKFLOW // FROM DATA TO ACTION</span>
             </div>
-            <span className="text-[#C8FF3D]">ZERO_HALLUCINATION_TARGET</span>
+            <span className="text-[#C8FF3D]">AI SYSTEM WORKFLOW</span>
           </div>
 
           {/* Sequential Technical Flow Diagram */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono-code">
             <div className="p-4 bg-[#080A0A] border border-[#181D1C] space-y-2">
-              <div className="text-[#C8FF3D]">01 // UNSTRUCTURED INGEST</div>
-              <div className="text-[#F5F7F2] font-bold">PDF, Audio, API Feeds</div>
+              <div className="text-[#C8FF3D]">01 // INPUTS</div>
+              <div className="text-[#F5F7F2] font-bold">Documents, forms, APIs</div>
               <p className="text-[11px] text-[#AEB7B2] font-sans leading-relaxed">
-                Raw organizational documents parsed via structural OCR & token chunking.
+                Information is extracted from source documents and connected systems for further processing.
               </p>
             </div>
 
             <div className="p-4 bg-[#080A0A] border border-[#181D1C] space-y-2">
-              <div className="text-[#C8FF3D]">02 // EMBEDDING & HNSW</div>
-              <div className="text-[#F5F7F2] font-bold">Vector + BM25 Index</div>
+              <div className="text-[#C8FF3D]">02 // SEARCH & RETRIEVAL</div>
+              <div className="text-[#F5F7F2] font-bold">Keyword and semantic search</div>
               <p className="text-[11px] text-[#AEB7B2] font-sans leading-relaxed">
-                Dense high-dimensional vectors stored in pgvector with lexical fallback.
+                Relevant information is retrieved using search methods suited to the data and use case.
               </p>
             </div>
 
             <div className="p-4 bg-[#080A0A] border border-[#181D1C] space-y-2">
-              <div className="text-[#FF6B5C]">03 // DETERMINISTIC GUARDRAIL</div>
-              <div className="text-[#F5F7F2] font-bold">Schema & Citation Match</div>
+              <div className="text-[#FF6B5C]">03 // VALIDATION</div>
+              <div className="text-[#F5F7F2] font-bold">Checks, sources, and business rules</div>
               <p className="text-[11px] text-[#AEB7B2] font-sans leading-relaxed">
-                Rigid validation checks every claim against exact source file offsets.
+                Responses and extracted data can be checked against available sources, expected formats, and application rules.
               </p>
             </div>
 
             <div className="p-4 bg-[#080A0A] border border-[#181D1C] space-y-2">
-              <div className="text-[#C8FF3D]">04 // ACTION EXECUTION</div>
-              <div className="text-[#F5F7F2] font-bold">API Mutate or Verified UI</div>
+              <div className="text-[#C8FF3D]">04 // OUTPUTS</div>
+              <div className="text-[#F5F7F2] font-bold">Answers, reports, and workflows</div>
               <p className="text-[11px] text-[#AEB7B2] font-sans leading-relaxed">
-                Triggers internal operational webhooks or outputs citation-backed reports.
+                The result can be presented to users, passed to another system, or used to support an approved workflow.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export const AiSection: React.FC = () => {
 
         {/* Seven AI Capabilities Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          
+
           {/* Capabilities List (Cols 1-6) */}
           <div className="lg:col-span-6 divide-y divide-[#181D1C] border-y border-[#181D1C]">
             {AI_CAPABILITIES.map((cap, idx) => {
@@ -84,9 +84,8 @@ export const AiSection: React.FC = () => {
                 <div
                   key={cap.title}
                   onClick={() => setActiveCapIndex(idx)}
-                  className={`py-4 px-3 cursor-pointer transition-all duration-200 flex items-center justify-between ${
-                    isSelected ? 'bg-[#111515] text-[#C8FF3D]' : 'text-[#F5F7F2] hover:text-[#C8FF3D]'
-                  }`}
+                  className={`py-4 px-3 cursor-pointer transition-all duration-200 flex items-center justify-between ${isSelected ? 'bg-[#111515] text-[#C8FF3D]' : 'text-[#F5F7F2] hover:text-[#C8FF3D]'
+                    }`}
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-mono-code text-[#AEB7B2]/50">
@@ -97,9 +96,8 @@ export const AiSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <ArrowRight className={`w-4 h-4 transition-transform ${
-                    isSelected ? 'translate-x-1 text-[#C8FF3D]' : 'text-[#AEB7B2]/40'
-                  }`} />
+                  <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'translate-x-1 text-[#C8FF3D]' : 'text-[#AEB7B2]/40'
+                    }`} />
                 </div>
               );
             })}
@@ -132,18 +130,18 @@ export const AiSection: React.FC = () => {
                   <div className="p-4 bg-[#080A0A] border border-[#181D1C] space-y-2">
                     <div className="text-xs font-mono-code text-[#AEB7B2] flex items-center gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#C8FF3D]" />
-                      <span>PRAGMATIC INTEGRATION PRINCIPLES</span>
+                      <span>HOW WE APPROACH AI</span>
                     </div>
                     <ul className="text-xs text-[#AEB7B2] space-y-1.5 list-disc list-inside font-sans">
-                      <li>Model evaluation runs against fixed test suites with regression scoring</li>
-                      <li>Strict fallback to deterministic rule engines whenever confidence thresholds dip</li>
-                      <li>Zero training on customer proprietary data by default</li>
+                      <li>Test AI outputs against representative examples and expected results.</li>
+                      <li>Validate important outputs and use rules or human review where needed.</li>
+                      <li>Set data access, retention, and provider settings according to project requirements.</li>
                     </ul>
                   </div>
 
                   <div className="text-xs font-mono-code text-[#AEB7B2]/50 pt-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#C8FF3D] rounded-none" />
-                    <span>BUILT ON OPEN STANDARDS: LANGCHAIN, LANGGRAPH, PGVECTOR, ANTHROPIC, OPENAI</span>
+                    <span>TECHNOLOGY CHOICES DEPEND ON THE PROJECT</span>
                   </div>
                 </div>
               );
