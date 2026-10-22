@@ -417,43 +417,83 @@ export const AI_CAPABILITIES = [
 export const INDUSTRIES_DATA: IndustryItem[] = [
   {
     name: 'Financial Services',
-    description: 'High-precision ledgers, compliance reporting, payment gateway integrations, and multi-currency treasury reconciliation.',
-    technicalChallenges: ['Double-entry arithmetic integrity', 'Sub-second audit trails', 'Strict regulatory encryption standards']
+    description:
+      'Applications for payments, financial reporting, transaction management, and reconciliation, built to handle sensitive data and business-critical calculations.',
+    technicalChallenges: [
+      'Accurate financial calculations',
+      'Transaction history and audit trails',
+      'Secure access to financial data'
+    ]
   },
   {
     name: 'Healthcare',
-    description: 'HIPAA/PIPEDA-compliant patient intake platforms, clinical trial management, diagnostic lab scheduling, and telemetry systems.',
-    technicalChallenges: ['PHI isolation & cryptographic access', 'Zero-leakage telemetry', 'HL7 / FHIR data integration']
+    description:
+      'Software for patient administration, appointment scheduling, clinical data management, and healthcare workflows, with careful attention to privacy and access controls.',
+    technicalChallenges: [
+      'Protection of sensitive health data',
+      'Role-based access controls',
+      'HL7 / FHIR integrations where required'
+    ]
   },
   {
     name: 'Retail & E-commerce',
-    description: 'Headless commerce storefronts, multi-warehouse inventory synchronization, custom checkout funnels, and customer loyalty engines.',
-    technicalChallenges: ['Peak flash-sale concurrency', 'Real-time stock reservation locks', 'Omnichannel catalog reconciliation']
+    description:
+      'Online stores, inventory management, checkout experiences, and customer platforms that connect products, orders, payments, and business operations.',
+    technicalChallenges: [
+      'Inventory synchronization',
+      'Reliable checkout and payments',
+      'Integration across sales channels'
+    ]
   },
   {
     name: 'Logistics',
-    description: 'Fleet telematics consoles, route optimization algorithms, freight dispatch tracking, and cold-chain temperature verification.',
-    technicalChallenges: ['Loss-tolerant mobile delta sync', 'Spatial vector routing', 'High-frequency IoT message ingest']
+    description:
+      'Systems for shipment tracking, fleet operations, dispatch, and delivery management that help teams coordinate information across locations and devices.',
+    technicalChallenges: [
+      'Reliable data synchronization',
+      'Mapping and route integration',
+      'Real-time status updates'
+    ]
   },
   {
     name: 'Professional Services',
-    description: 'Client collaboration extranets, resource scheduling, automated timesheet verification, and complex billing engines.',
-    technicalChallenges: ['Granular multi-tenant permissions', 'Custom document generation', 'Third-party accounting sync']
+    description:
+      'Business tools for client management, project tracking, scheduling, time entry, invoicing, and reporting, tailored to how service teams work.',
+    technicalChallenges: [
+      'Client and team permissions',
+      'Document and report generation',
+      'Accounting system integrations'
+    ]
   },
   {
     name: 'SaaS & Technology',
-    description: 'Core software platforms, multi-tenant architectures, developer APIs, subscription lifecycle billing, and feature-flag frameworks.',
-    technicalChallenges: ['Zero-downtime schema evolution', 'API rate-limiting & metering', 'Multi-region disaster failover']
+    description:
+      'Web platforms, subscription products, internal tools, and APIs designed around product requirements, maintainability, and the needs of growing teams.',
+    technicalChallenges: [
+      'Multi-tenant architecture',
+      'API design and usage controls',
+      'Reliable database changes'
+    ]
   },
   {
     name: 'Startups',
-    description: 'High-velocity MVP architectures built on clean foundations designed to support rapid iteration and venture scale.',
-    technicalChallenges: ['Lean modular design', 'Fast deployment cadence', 'Scalable relational data schemas']
+    description:
+      'MVPs and early-stage products that help founders test ideas, deliver core features, and build a foundation they can extend as the business evolves.',
+    technicalChallenges: [
+      'Prioritizing essential features',
+      'Fast, maintainable delivery',
+      'Architecture that can evolve'
+    ]
   },
   {
     name: 'Manufacturing',
-    description: 'Shop-floor monitoring dashboards, industrial IoT telemetry collectors, quality assurance logging, and supplier coordination.',
-    technicalChallenges: ['Edge device resilience', 'Legacy PLC connectivity', 'Predictive maintenance alert loops']
+    description:
+      'Applications for production tracking, quality records, inventory, equipment monitoring, and coordination between shop-floor operations and business systems.',
+    technicalChallenges: [
+      'Integration with existing equipment',
+      'Production and quality data',
+      'Reliable operational reporting'
+    ]
   }
 ];
 

@@ -6,8 +6,8 @@ export const IndustriesSection: React.FC = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <section 
-      id="industries" 
+    <section
+      id="industries"
       className="py-14 sm:py-16 lg:py-20 bg-[#111515] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -20,10 +20,10 @@ export const IndustriesSection: React.FC = () => {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F5F7F2] tracking-tight mb-6">
-            Different businesses. Similar engineering problems.
+            Software for the way your industry works.
           </h2>
           <p className="text-base sm:text-lg text-[#AEB7B2] leading-relaxed">
-            While business domains diverge, the underlying engineering requirements remain constant: clean data boundaries, fast response times, resilient pipelines, and trustworthy security.
+            We work across different industries, building applications and systems around the processes, information, and day-to-day challenges that matter to each business.
           </p>
         </div>
 
@@ -40,45 +40,40 @@ export const IndustriesSection: React.FC = () => {
                 className="group py-7 sm:py-9 px-3 sm:px-6 transition-all duration-300 hover:bg-[#080A0A]/60 relative cursor-pointer"
               >
                 {/* Chartreuse left accent indicator */}
-                <div 
-                  className={`absolute left-0 top-0 bottom-0 w-[3px] bg-[#C8FF3D] transition-transform duration-300 origin-top ${
-                    isHovered ? 'scale-y-100' : 'scale-y-0'
-                  }`} 
+                <div
+                  className={`absolute left-0 top-0 bottom-0 w-[3px] bg-[#C8FF3D] transition-transform duration-300 origin-top ${isHovered ? 'scale-y-100' : 'scale-y-0'
+                    }`}
                 />
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-                  
+
                   {/* Industry Name with small connecting line (Cols 1-5) */}
                   <div className="lg:col-span-5 flex items-center gap-4">
-                    <span 
-                      className={`h-[1px] bg-[#C8FF3D] transition-all duration-300 ${
-                        isHovered ? 'w-6' : 'w-0'
-                      }`}
+                    <span
+                      className={`h-[1px] bg-[#C8FF3D] transition-all duration-300 ${isHovered ? 'w-6' : 'w-0'
+                        }`}
                     />
-                    <h3 className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors duration-200 ${
-                      isHovered ? 'text-[#C8FF3D] translate-x-1' : 'text-[#F5F7F2]'
-                    }`}>
+                    <h3 className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors duration-200 ${isHovered ? 'text-[#C8FF3D] translate-x-1' : 'text-[#F5F7F2]'
+                      }`}>
                       {industry.name}
                     </h3>
                   </div>
 
                   {/* Description fades in / expands (Cols 6-11) */}
                   <div className="lg:col-span-6">
-                    <p className={`text-sm sm:text-base leading-relaxed transition-all duration-300 ${
-                      isHovered ? 'text-[#F5F7F2]' : 'text-[#AEB7B2]'
-                    }`}>
+                    <p className={`text-sm sm:text-base leading-relaxed transition-all duration-300 ${isHovered ? 'text-[#F5F7F2]' : 'text-[#AEB7B2]'
+                      }`}>
                       {industry.description}
                     </p>
 
                     {/* Technical challenges tags that appear on hover */}
-                    <div 
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isHovered ? 'max-h-20 opacity-100 mt-3' : 'max-h-0 opacity-0'
-                      }`}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${isHovered ? 'max-h-20 opacity-100 mt-3' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       <div className="flex flex-wrap gap-2 pt-1">
                         {industry.technicalChallenges.map((ch, cIdx) => (
-                          <span 
+                          <span
                             key={cIdx}
                             className="text-[10px] font-mono-code px-2 py-0.5 bg-[#181D1C] border border-[#242C2A] text-[#AEB7B2]"
                           >
@@ -91,9 +86,8 @@ export const IndustriesSection: React.FC = () => {
 
                   {/* Arrow indicator (Col 12) */}
                   <div className="lg:col-span-1 flex justify-end">
-                    <ArrowUpRight className={`w-5 h-5 transition-transform duration-200 ${
-                      isHovered ? 'text-[#C8FF3D] translate-x-1 -translate-y-1' : 'text-[#AEB7B2]/30'
-                    }`} />
+                    <ArrowUpRight className={`w-5 h-5 transition-transform duration-200 ${isHovered ? 'text-[#C8FF3D] translate-x-1 -translate-y-1' : 'text-[#AEB7B2]/30'
+                      }`} />
                   </div>
 
                 </div>
@@ -103,10 +97,10 @@ export const IndustriesSection: React.FC = () => {
         </div>
 
         {/* Bottom index footnote */}
-        <div className="mt-8 flex justify-between text-xs font-mono-code text-[#AEB7B2]/60 pt-4">
+        {/* <div className="mt-8 flex justify-between text-xs font-mono-code text-[#AEB7B2]/60 pt-4">
           <span>8 PRIMARY SECTORS SERVED</span>
           <span className="text-[#C8FF3D]">DOMAIN EXPERTISE APPLIED DETERMINISTICALLY</span>
-        </div>
+        </div> */}
       </div>
     </section>
   );
