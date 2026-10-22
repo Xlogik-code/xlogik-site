@@ -529,30 +529,36 @@ export const WORK_STEPS: WorkStep[] = [
     number: '01',
     name: 'Discover',
     description: 'Understand the problem.',
-    details: 'We dig into current operational workflows, interview key users, inspect existing codebase health, and identify technical and business bottlenecks.'
+    details:
+      'We learn about your business, current workflows, users, and goals. Together, we identify the main challenges, requirements, and what the solution needs to achieve.'
   },
   {
     number: '02',
     name: 'Plan',
-    description: 'Define architecture and priorities.',
-    details: 'We outline concrete system diagrams, database schemas, API contracts, milestone estimates, and the critical delivery path.'
+    description: 'Agree on the approach.',
+    details:
+      'We define the scope, prioritize features, choose a suitable technical approach, and outline the key milestones before development begins.'
   },
   {
     number: '03',
     name: 'Build',
-    description: 'Develop incrementally.',
-    details: 'We work in rapid, observable iterations. You review functional software deployed to staging every two weeks, with transparent code reviews.'
+    description: 'Develop and review.',
+    details:
+      'We build the software in manageable stages, test important functionality, and share progress so you can review the work and provide feedback as it takes shape.'
   },
   {
     number: '04',
     name: 'Launch',
-    description: 'Deploy and monitor.',
-    details: 'We execute tested zero-downtime migration plans, verify telemetry, and actively observe application performance under real production traffic.'
+    description: 'Prepare for real use.',
+    details:
+      'We prepare the application for deployment, check critical workflows, configure the required environments, and address launch issues so the software is ready for its intended use.'
   },
   {
     number: '05',
-    name: 'Evolve',
-    description: 'Continue improving.',
-    details: 'We provide structured handoff documentation or ongoing engineering capacity, iterating based on actual user feedback and production analytics.'
+    name: 'Improve',
+    description: 'Support what comes next.',
+    details:
+      'After launch, we can help maintain the software, fix issues, refine existing features, and add new capabilities as your business and user needs change.'
   }
 ];
+
