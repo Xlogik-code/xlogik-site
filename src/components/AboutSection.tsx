@@ -3,8 +3,8 @@ import { VALUES_DATA } from '../data/content';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="py-14 sm:py-16 lg:py-20 bg-[#080A0A] border-b border-[#181D1C] relative"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Editorial Headline & Statement */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24 sm:mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-12 sm:mb-14">
           <div className="lg:col-span-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#F5F7F2] leading-[1.12] tracking-[-0.03em]">
               Technology is complicated enough.{' '}
@@ -29,29 +29,29 @@ export const AboutSection: React.FC = () => {
 
           <div className="lg:col-span-4 flex flex-col justify-end space-y-6">
             <p className="text-base sm:text-lg text-[#F5F7F2] font-semibold leading-relaxed">
-              XLOGIK is a Canadian software engineering and IT services company focused on building practical digital products and reliable technology systems.
+              XLOGIK is a Canadian software engineering and IT services company. We build digital products, business applications, and technology systems around the way organizations work.
             </p>
             <p className="text-sm sm:text-base text-[#AEB7B2] leading-relaxed">
-              We operate without agency bureaucracy or opaque communication. We pair senior product designers with experienced systems engineers to solve complex technical problems directly.
+              We take a practical approach to software development: understand the problem, make thoughtful technical decisions, and communicate clearly throughout the process. The aim is to deliver software that solves a real need and remains manageable as the business evolves.
             </p>
           </div>
         </div>
 
         {/* 5 Core Pillars: Engineering philosophy, Product mindset, Communication, Maintainability, Long-term thinking */}
-        <div className="mb-28 pt-12 border-t border-[#181D1C] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="mb-12 sm:mb-14 pt-12 sm:pt-14 border-t border-[#181D1C] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="space-y-2">
-            <div className="text-xs font-mono-code text-[#C8FF3D]">// 01 PHILOSOPHY</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Engineering Rigor</h3>
+            <div className="text-xs font-mono-code text-[#C8FF3D]">// 01 ENGINEERING</div>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Sound Engineering</h3>
             <p className="text-xs text-[#AEB7B2] leading-relaxed">
-              Clean code boundaries, typed schemas, and comprehensive tests that keep systems stable over years.
+              We pay attention to code quality, system structure, data integrity, and testing so the software is easier to understand, maintain, and change.
             </p>
           </div>
 
           <div className="space-y-2">
             <div className="text-xs font-mono-code text-[#C8FF3D]">// 02 PRODUCT</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Product Mindset</h3>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Understand the Business</h3>
             <p className="text-xs text-[#AEB7B2] leading-relaxed">
-              We look beyond tickets to understand how the software impacts real users and actual business operations.
+              We look at the people, processes, and business requirements behind a project before deciding how the software should work.
             </p>
           </div>
 
@@ -59,46 +59,46 @@ export const AboutSection: React.FC = () => {
             <div className="text-xs font-mono-code text-[#C8FF3D]">// 03 TRANSPARENCY</div>
             <h3 className="text-base font-bold text-[#F5F7F2]">Clear Communication</h3>
             <p className="text-xs text-[#AEB7B2] leading-relaxed">
-              Direct access to the engineers writing the code. No middlemen, no jargon hiding delays or ambiguities.
+              We explain decisions, discuss trade-offs, and keep priorities and expectations clear as the work progresses.
             </p>
           </div>
 
           <div className="space-y-2">
             <div className="text-xs font-mono-code text-[#C8FF3D]">// 04 CRAFT</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Maintainability</h3>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Built to Be Maintained</h3>
             <p className="text-xs text-[#AEB7B2] leading-relaxed">
-              Software your internal developers or future partners can understand, maintain, and expand with ease.
+              We favor clear code, sensible architecture, and useful documentation so future development doesn't have to start from scratch.
             </p>
           </div>
 
           <div className="space-y-2">
             <div className="text-xs font-mono-code text-[#FF6B5C]">// 05 PERSPECTIVE</div>
-            <h3 className="text-base font-bold text-[#F5F7F2]">Long-Term Thinking</h3>
+            <h3 className="text-base font-bold text-[#F5F7F2]">Think Beyond Launch</h3>
             <p className="text-xs text-[#AEB7B2] leading-relaxed">
-              We build tools and architectures that remain assets rather than turning into technical debt twelve months later.
+              We consider how software will be operated, updated, and extended over time—not just what it takes to get the first version working.
             </p>
           </div>
         </div>
 
         {/* Section 18 — VALUES (Large typography, NO generic icon cards) */}
-        <div className="pt-16 border-t border-[#181D1C]">
+        <div className="pt-12 sm:pt-14 border-t border-[#181D1C]">
           <div className="flex items-center justify-between mb-16">
             <div>
               <div className="text-xs font-mono-code text-[#C8FF3D] uppercase tracking-widest mb-2">
                 CORE PRINCIPLES
               </div>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#F5F7F2] tracking-tight">
-                Our Values.
+                The principles behind our work.
               </h3>
             </div>
             <span className="text-xs font-mono-code text-[#AEB7B2]/50 hidden sm:inline">
-              NO CLICHÉS // REAL CRITERIA
+              HOW WE MAKE DECISIONS
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {VALUES_DATA.map((val) => (
-              <div 
+              <div
                 key={val.number}
                 className="group border-t border-[#181D1C] pt-6 space-y-4 hover:border-[#C8FF3D] transition-colors duration-300"
               >

@@ -501,22 +501,26 @@ export const VALUES_DATA: ValueItem[] = [
   {
     number: '01',
     title: 'Understand first.',
-    description: 'Spend time understanding the problem before deciding what to build. Writing code before clarifying business constraints leads to rework.'
+    description:
+      'Take time to understand the problem, the people involved, and the business constraints before deciding what to build. A clear starting point helps avoid unnecessary work later.'
   },
   {
     number: '02',
     title: 'Keep it maintainable.',
-    description: 'Software should still make sense long after launch. We prioritize clarity, standardized patterns, and clean boundaries over clever abstractions.'
+    description:
+      'Write software that other developers can understand and work with. Clear structure and consistent patterns matter more over time than clever solutions that are difficult to change.'
   },
   {
     number: '03',
     title: 'Be clear about trade-offs.',
-    description: 'Every technical decision has consequences — whether speed, cost, flexibility, or complexity. We explain choices transparently so there are no surprises.'
+    description:
+      'Every decision involves trade-offs in cost, speed, flexibility, and complexity. We make those choices clear so everyone understands the reasoning and its implications.'
   },
   {
     number: '04',
     title: 'Build with purpose.',
-    description: 'Use technology because it solves a problem, not because it is trending. Every library, framework, or model must justify its presence.'
+    description:
+      'Choose tools and technologies based on the problem they need to solve. A new framework or AI feature is only worthwhile when it adds practical value to the product.'
   }
 ];
 
