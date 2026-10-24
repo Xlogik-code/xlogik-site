@@ -47,24 +47,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
   return (
     <header
       id="main-navigation-header"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-[#080A0A]/90 backdrop-blur-md border-b border-[#242C2A] py-3.5 shadow-lg'
           : 'bg-transparent py-5 border-b border-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Left: Minimal Geometric Wordmark */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           id="brand-logo"
           className="group flex items-center gap-2.5 text-[#F5F7F2] font-extrabold tracking-[-0.04em] text-xl sm:text-2xl transition-opacity hover:opacity-90"
         >
           <span className="inline-block w-2.5 h-2.5 bg-[#C8FF3D] rounded-none group-hover:scale-110 transition-transform duration-200" />
           <span className="font-sans font-bold tracking-tight">XLOGIK</span>
-          <span className="text-[10px] font-mono-code font-normal text-[#AEB7B2]/60 ml-1 hidden sm:inline">
+          {/* <span className="text-[10px] font-mono-code font-normal text-[#AEB7B2]/60 ml-1 hidden sm:inline">
             // CA
-          </span>
+          </span> */}
         </a>
 
         {/* Center: Desktop Navigation Links */}
@@ -76,9 +75,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 key={link.id}
                 href={link.href}
                 id={`nav-link-${link.id}`}
-                className={`relative py-1 font-medium transition-colors duration-200 ${
-                  isActive ? 'text-[#F5F7F2]' : 'text-[#AEB7B2] hover:text-[#F5F7F2]'
-                }`}
+                className={`relative py-1 font-medium transition-colors duration-200 ${isActive ? 'text-[#F5F7F2]' : 'text-[#AEB7B2] hover:text-[#F5F7F2]'
+                  }`}
               >
                 <span>{link.name}</span>
                 {isActive && (
@@ -124,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div 
+        <div
           id="mobile-navigation-drawer"
           className="md:hidden bg-[#080A0A] border-b border-[#242C2A] px-6 py-6 space-y-4"
         >
