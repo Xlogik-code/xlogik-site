@@ -14,10 +14,10 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full">
         {/* Asymmetric 12-Column Editorial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid grid-cols-1 min-[900px]:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
           
           {/* Left / Editorial Content (Cols 1-7) */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <div className="min-[900px]:col-span-7 flex flex-col justify-center">
             
             {/* Small Technical Category Label */}
             <div className="flex items-center gap-2 mb-4 sm:mb-6 lg:mb-4">
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartConversation }) => {
           </div>
 
           {/* Right / Hero Technical Composition (Cols 8-12) */}
-          <div className="lg:col-span-5 relative w-full mt-4 lg:mt-0">
+          <div className="min-[900px]:col-span-5 relative w-full mt-8 min-[900px]:mt-0">
             <HeroVisual />
           </div>
 
