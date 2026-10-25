@@ -16,7 +16,7 @@ const NODES: NodePoint[] = [
   { id: 'n2', label: 'APPLICATION.SYSTEMS', x: 74, y: 18, type: 'graphite', subText: 'FRONTEND / BACKEND', radius: 3, labelAlign: 'left' },
   { id: 'n3', label: 'INTEGRATIONS', x: 77, y: 38, type: 'chartreuse', subText: 'APIs / SERVICES', radius: 4, labelAlign: 'left' },
   { id: 'n4', label: 'DATA.SYSTEMS', x: 24, y: 48, type: 'coral', subText: 'SQL / NoSQL / SEARCH', radius: 3.5, labelAlign: 'right' },
-  { id: 'n5', label: 'AI & AUTOMATION', x: 70, y: 60, type: 'chartreuse', subText: 'LLM / RAG / AGENTS', radius: 4.5, labelAlign: 'right' },
+  { id: 'n5', label: 'AI & AUTOMATION', x: 70, y: 60, type: 'chartreuse', subText: 'LLM / RAG / AGENTS', radius: 4.5, labelAlign: 'left' },
   { id: 'n6', label: 'CLOUD & DELIVERY', x: 76, y: 70, type: 'graphite', subText: 'CLOUD / CONTAINERS / CI-CD', radius: 3, labelAlign: 'left' },
   { id: 'n7', label: 'SECURITY & ACCESS', x: 22, y: 82, type: 'chartreuse', subText: 'AUTH / RBAC / DATA', radius: 4, labelAlign: 'right' }
 ];
@@ -43,6 +43,15 @@ export const HeroVisual: React.FC = () => {
     setMousePos({ x, y });
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current || e.touches.length === 0) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = Math.max(0, Math.min(1, (touch.clientX - rect.left) / rect.width));
+    const y = Math.max(0, Math.min(1, (touch.clientY - rect.top) / rect.height));
+    setMousePos({ x, y });
+  };
+
   const handleMouseLeave = () => {
     setMousePos({ x: 0.5, y: 0.5 });
     setActiveNode(null);
@@ -57,7 +66,9 @@ export const HeroVisual: React.FC = () => {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full h-[clamp(440px,calc(100svh-300px),520px)] sm:h-[clamp(460px,calc(100svh-240px),580px)] lg:h-[clamp(480px,calc(100svh-250px),620px)] bg-[#111515] border border-[#242C2A] rounded-sm overflow-hidden select-none transition-all duration-300"
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleMouseLeave}
+      className="relative w-full h-[320px] xs:h-[360px] sm:h-[420px] md:h-[460px] lg:h-[500px] xl:h-[560px] bg-[#111515] border border-[#242C2A] rounded-sm overflow-hidden select-none transition-all duration-300 touch-pan-y"
       id="hero-technical-canvas"
     >
       {/* Blueprint Grid Layer */}
@@ -69,21 +80,21 @@ export const HeroVisual: React.FC = () => {
       />
 
       {/* Structural Framing & Coordinate Calibrations */}
-      <div className="absolute top-3 left-4 text-[10px] font-mono-code text-[#AEB7B2]/70 flex items-center gap-3">
-        <span className="inline-block w-1.5 h-1.5 bg-[#C8FF3D] animate-pulse rounded-none" />
-        <span className="tracking-widest">XLOGIK // ENGINEERING_SYSTEM</span>
+      <div className="absolute top-2.5 sm:top-3 left-3 sm:left-4 text-[9px] sm:text-[10px] font-mono-code text-[#AEB7B2]/70 flex items-center gap-2 sm:gap-3">
+        <span className="inline-block w-1.5 h-1.5 bg-[#C8FF3D] animate-pulse rounded-none shrink-0" />
+        <span className="tracking-wider sm:tracking-widest">XLOGIK // ENGINEERING_SYSTEM</span>
       </div>
 
-      <div className="absolute top-3 right-4 text-[10px] font-mono-code text-[#AEB7B2]/60 hidden sm:block">
+      <div className="absolute top-2.5 sm:top-3 right-3 sm:right-4 text-[9px] sm:text-[10px] font-mono-code text-[#AEB7B2]/60 hidden sm:block">
         WEB / MOBILE / BACKEND / AI
       </div>
 
-      <div className="absolute bottom-3 left-4 text-[10px] font-mono-code text-[#AEB7B2]/60 flex items-center gap-4">
+      <div className="absolute bottom-2.5 sm:bottom-3 left-3 sm:left-4 text-[9px] sm:text-[10px] font-mono-code text-[#AEB7B2]/60 flex items-center gap-3 sm:gap-4">
         <span>SYSTEM: <strong className="text-[#C8FF3D] font-normal">ACTIVE</strong></span>
         <span className="hidden sm:inline">MODE: ENGINEERING</span>
       </div>
 
-      <div className="absolute bottom-3 right-4 text-[10px] font-mono-code text-[#AEB7B2]/60 text-right">
+      <div className="absolute bottom-2.5 sm:bottom-3 right-3 sm:right-4 text-[9px] sm:text-[10px] font-mono-code text-[#AEB7B2]/60 text-right">
         XLOGIK_SYSTEM_MAP
       </div>
 
@@ -218,14 +229,14 @@ export const HeroVisual: React.FC = () => {
 
               {/* Minimal technical label tag */}
               <div 
-                className={`absolute ${node.labelAlign === 'left' ? 'right-4 text-right' : 'left-4'} top-1/2 -translate-y-1/2 whitespace-nowrap px-2.5 py-1.5 bg-[#080A0A]/90 border border-[#242C2A] text-[9px] font-mono-code transition-all duration-200 ${
-                  isHovered || isProximity ? `opacity-100 ${node.labelAlign === 'left' ? '-translate-x-1' : 'translate-x-1'}` : 'opacity-75'
+                className={`absolute ${node.labelAlign === 'left' ? 'right-3 sm:right-4 text-right' : 'left-3 sm:left-4'} top-1/2 -translate-y-1/2 whitespace-nowrap px-1.5 sm:px-2.5 py-1 sm:py-1.5 bg-[#080A0A]/90 border border-[#242C2A] text-[8px] sm:text-[9px] font-mono-code transition-all duration-200 ${
+                  isHovered || isProximity ? `opacity-100 ${node.labelAlign === 'left' ? '-translate-x-1' : 'translate-x-1'}` : 'opacity-75 sm:opacity-80'
                 }`}
               >
                 <div className={`leading-tight ${textColor}`}>
                   {node.label}
                 </div>
-                <div className="mt-1 text-[8px] text-[#AEB7B2]/70 font-sans tracking-wide leading-tight">
+                <div className="mt-0.5 sm:mt-1 text-[7px] sm:text-[8px] text-[#AEB7B2]/70 font-sans tracking-wide leading-tight">
                   {node.subText}
                 </div>
               </div>

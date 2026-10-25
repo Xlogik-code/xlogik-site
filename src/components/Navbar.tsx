@@ -135,7 +135,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 className="text-lg font-medium text-[#AEB7B2] hover:text-[#C8FF3D] transition-colors py-1 flex items-center justify-between"
               >
                 <span>{link.name}</span>
-                <span className="text-xs font-mono-code text-[#AEB7B2]/40">#0{navLinks.indexOf(link) + 1}</span>
               </a>
             ))}
           </nav>
